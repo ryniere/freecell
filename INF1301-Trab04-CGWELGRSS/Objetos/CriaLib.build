@@ -1,0 +1,5 @@
+/OUT:FreeCell.lib
+/MACHINE:IX86
+carta.obj  lista.obj  tratamento_falha.obj  baralho.obj  celula_temporaria.obj  
+coluna_base.obj  colunas_aleatorias.obj  
+

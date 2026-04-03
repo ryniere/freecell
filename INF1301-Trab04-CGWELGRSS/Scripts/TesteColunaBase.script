@@ -1,0 +1,122 @@
+// Script:    TesteColunaBase.script
+// Autor:     Carla Galdino Wanderley, Eliana Leite Goldner, Ryniere Santos Silva
+// Data:      23/abr/2008
+// Propósito: Testar o módulo de coluna base
+//
+
+== Inicializar valores
+
+=declararparm   pNULL          int  0
+=declararparm   pNaoNULL       int  1
+
+=declararparm   OK             int  0
+=declararparm   AtoProibido    int  1
+=declararparm   Erro           int  2
+
+=declararparm	valor0  int 1
+=declararparm	valor1  int 2
+=declararparm	valor2  int 3
+=declararparm	valor3  int 4
+
+=declararparm	naipeCopas    string  "copas"
+=declararparm	naipeEspadas  string  "espadas"
+=declararparm	naipePaus     string  "paus"
+=declararparm	naipeOuros    string  "ouros"
+
+=declararparm	indiceCopas    	    int  1
+=declararparm	indiceEspadas  	    int  2
+=declararparm	indiceOuros    	    int  3
+=declararparm	indicePaus     	    int  4
+=declararparm   colunaInexistente1  int  5
+=declararparm   colunaInexistente2  int  0
+
+=declararparm	Carta1  int 0
+=declararparm	Carta2  int 1
+=declararparm	Carta3  int 2
+=declararparm	Carta4  int 3
+=declararparm	Carta5  int 4
+=declararparm	Carta6  int 5
+=declararparm	Carta7  int 6
+=declararparm	Carta8  int 7
+=declararparm	Carta9  int 8
+=declararparm	Carta10 int 9
+=declararparm	Carta11 int 10
+=declararparm	Carta12 int 11
+=declararparm	Carta13 int 12
+=declararparm	Carta14 int 13
+=declararparm	Carta15 int 14
+
+== Imprimir colunas base inexistentes( ao final do jogo)
+=imprimirbase Erro  
+
+== Criar colunas base
+=criarbase
+
+==Imprimir colunas base vazias
+=imprimirbase OK
+
+== Obter carta em coluna base vazia
+=obtercartabase	indiceCopas pNULL
+
+==Obter carta em coluna inexistente
+=obtercartabase	colunaInexistente1 pNULL
+=obtercartabase	colunaInexistente2 pNULL
+
+== Inserir As em coluna Base
+
+=inserircartabase valor0  naipeCopas   Carta1 indiceCopas OK
+=inserircartabase valor0  naipeEspadas Carta1 indiceEspadas OK
+
+== Obter carta coluna base
+=obtercartabase	indiceEspadas pNaoNULL
+
+== Inserir carta em sequencia
+
+=inserircartabase valor1  naipeCopas Carta1 indiceCopas OK
+=inserircartabase valor2  naipeCopas Carta1 indiceCopas OK
+
+== Inserir carta diferente de As no começo da base
+
+=inserircartabase valor1  naipePaus Carta1 indicePaus AtoProibido
+=inserircartabase valor2  naipePaus Carta1 indicePaus AtoProibido
+
+== Inserir carta sem sequencia
+
+=inserircartabase valor2  naipeEspadas Carta1 indiceEspadas AtoProibido
+=inserircartabase valor3  naipeEspadas Carta1 indiceEspadas AtoProibido
+
+== Imprimir colunas preenchida
+=imprimirbase OK
+
+== Ir final base
+=irfinalbase	indiceCopas OK
+
+== Avancar elemento corrente coluna base no fim
+=avancarelemcorrbase	indiceCopas 1 Erro
+
+== Recuar (avançar para trás) elemento corrente coluna base
+=avancarelemcorrbase	indiceCopas -1 OK
+
+== Ir inicio coluna base
+=iriniciobase	indiceCopas OK
+=iriniciobase	indiceEspadas OK
+
+== Recuar (avançar para trás) elemento corrente coluna base no inicio
+=avancarelemcorrbase	indiceCopas -1 Erro
+
+== Avancar elemento corrente coluna base
+=avancarelemcorrbase	indiceCopas 1 OK
+
+== Avançar elemento corrente coluna base e chegar/passar do fim da lista
+=avancarelemcorrbase	indiceCopas 2 Erro
+
+== Avançar elemento corrente coluna base vazia
+=avancarelemcorrbase	indiceOuros 1 Erro
+
+== Destruir Colunas base
+=destruirbase
+
+==Resetar cartas
+=resetcartas
+
+// fim

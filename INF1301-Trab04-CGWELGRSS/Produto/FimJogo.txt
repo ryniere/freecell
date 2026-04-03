@@ -1,0 +1,68 @@
+FIM
+FIM
+FIM
+FIM
+copas 1
+copas 2
+copas 3
+copas 4
+copas 5
+copas 6
+copas 7
+copas 8
+copas 9
+copas 10
+copas 11
+copas 12
+copas 13
+FIM
+espadas 1
+espadas 2
+espadas 3
+espadas 4
+espadas 5
+espadas 6
+espadas 7
+espadas 8
+espadas 9
+espadas 10
+espadas 11
+espadas 12
+espadas 13
+FIM
+ouros 1
+ouros 2
+ouros 3
+ouros 4
+ouros 5
+ouros 6
+ouros 7
+ouros 8
+ouros 9
+ouros 10
+ouros 11
+ouros 12
+ouros 13
+FIM
+paus 1
+paus 2
+paus 3
+paus 4
+paus 5
+paus 6
+paus 7
+paus 8
+paus 9
+paus 10
+paus 11
+paus 12
+FIM
+FIM
+FIM
+FIM
+paus 13
+FIM
+FIM
+FIM
+FIM
+FIM

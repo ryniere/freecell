@@ -1,0 +1,26 @@
+# Composicao do programa de teste do modulo Baralho
+# Este exemplo utiliza o arcabouço completo 
+
+[Diretorios]
+
+Nome        =  TesteBaralho
+PathDefault =  ..\Fontes
+err         =  ..\Produto
+obj         =  ..\Objetos
+c           =  ..\Fontes
+h           =  ..\Fontes
+
+[Modulos]
+TestBAR
+Baralho
+Carta
+
+[BuildInicio]
+/OUT:..\produto\TRAB2-4.exe
+/INCREMENTAL:NO
+/MACHINE:IX86
+
+[BuildFim]
+ArcaboucoTeste.lib
+
+[Fim]

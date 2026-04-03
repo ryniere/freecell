@@ -1,0 +1,27 @@
+# Composicao do programa de teste do modulo Persistencia
+# Este exemplo utiliza o arcabouço completo 
+
+[Diretorios]
+
+Nome        =  TestePersistencia
+PathDefault =  ..\Fontes
+err         =  ..\Produto
+obj         =  ..\Objetos
+c           =  ..\Fontes
+h           =  ..\Fontes
+
+[Modulos]
+TestPersistencia
+PERSISTENCIA
+
+[BuildInicio]
+/OUT:..\produto\TRAB3-1.exe
+/INCREMENTAL:NO
+/MACHINE:IX86
+
+[BuildFim]
+FreeCell.lib
+ArcaboucoTeste.lib
+
+
+[Fim]

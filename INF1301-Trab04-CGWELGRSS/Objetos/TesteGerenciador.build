@@ -1,0 +1,7 @@
+/OUT:..\produto\TRAB3-2.exe
+/INCREMENTAL:NO
+/MACHINE:IX86
+testgerenciador.obj  gerenciador.obj  persistencia.obj  
+FreeCell.lib
+ArcaboucoTeste.lib
+

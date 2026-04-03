@@ -1,0 +1,278 @@
+ Apresentação projeto FREECELL e seus Respectivos Teste de Unidade
+
+ Leia.me
+
+Carla Galdino
+Eliana Goldner
+Ryniere Silva
+
+Junho 2009
+
+
+Apresentação
+
+Este texto descreve o conteúdo do arquivo INF1301-Trab02-CGEGRS.zip
+ que contém a documentação e os módulos que compoem o jogo FREECELL.
+
+ Instalação
+
+Há duas maneiras de executar o teste dos módulos: o que recompila os módulos e o que apenas executa.
+Para executar em conjunto com a compilação, basta abrir uma janela de prompt de comando do windows XP mais recente, ir para o diretório
+INF1301-Trab02-CGWELGRSS\BATCHES, e executar o arquivo Tudo.bat, se der algum erro de compilação, pegue o arquivo vsvars32.bat na pastas commons
+do visual studio instalado no seu pc e substitua na pasta BATCHES.
+A segunda forma de execução é executar o arquivo TestaTudo.bat no mesmo diretório.
+
+
+ Documentação(na pasta Documentos)
+
+ - Arquivo Especificação de requisitos - Especificação do jogo FREECELL
+
+ - Arquivo INF1301-Trab02-CGWELGRSS-LeiaMe.doc – Indica os passos a serem seguidos para executar os testes automáticos
+ dos módulos do projeto FREECELL.
+ 
+ - Arquivo INF1301-Trab02-CGWELGRSS-ModeloConceitual.jpg - Ilustra a abordagem do grupo no planejamento do projeto. 
+ Se trata de um modelo conceitual contendo os módulos criados ( caixas ), suas ligações e as interfaces de comunicação ( provida e requerida ).
+ 
+ - Arquivo INF1301-Trab02-CGWELGRSS-ModeloFísico.jpg - Ilustra a organização das estruturas usadas na implementação do projeto.
+
+ - Arquivo INF1301-Trab03-CGWELGRSS-ExemploFísico.bmp - Ilustra uma estância em que o jogo possa estar.
+  
+ - Arquivo roteiroTesteFreecell.txt - Explica como se deve testar o jogo FreeCell de maneira manual.
+
+ - Arquivo Linguagem de teste.txt - Explica comandos do script de teste do verificador da lista genérica
+
+
+
+Arquivos de código fonte(na pasta FONTES)
+
+
+Módulo Carta
+
+CARTA.H – Arquivo header do módulo carta. Ele contém a interface menos restrita do módulo, disponibilizando um ponteiro para o tipo carta e funções de 
+	consulta aos dados da estrutura.
+	
+PRIVILEGIOCARTA.H – Arquivo header do módulo carta. Ele contém a interface mais restrita do módulo, disponibilizando uma função de criação e destruição 
+	de estruturas carta.
+
+CARTA.C – Arquivo que contém a implementação das funções de interface do módulo carta, além de funções auxiliares.
+
+TST_ESPEC.H – Arquivo header do módulo de teste referente ao módulo carta. Este arquivo possui a interface do módulo de teste específico 
+que é acoplado ao módulo de teste genérico a fim de automatizar os testes sobre o módulo.
+
+TESTCARTA.C – Arquivo que contém a implementação da interface de teste específico do módulo carta.
+
+
+Módulo Baralho
+
+BARALHO.H – Arquivo header do módulo baralho. Ele contém a interface do módulo, disponibilizando um vetor de cartas e 
+funções de criação, destruição e embaralhamento aos seus módulos clientes.
+	
+BARALHO.C – Arquivo que contém a implementação das funções de interface do módulo baralho, além de funções auxiliares.
+
+TST_ESPEC.H – Arquivo header do módulo de teste referente ao módulo baralho. Este arquivo possui a interface do módulo de teste específico 
+que é acoplado ao módulo de teste genérico a fim de automatizar os testes sobre o módulo.
+
+TESTBAR.C – Arquivo que contém a implementação da interface de teste específico do módulo baralho.
+
+
+Módulo Coluna Base
+
+COLUNA_BASE.H - Arquivo header do módulo colunaBase. Ele contém a interface do módulo, quatro listas que representam 
+cada um dos naipes do baralho e funções relacionadas a elas, como criação e inserção de elemento, impressão e destruição. 
+
+COLUNA_BASE.C – Arquivo que contém a implementação das funções de interface do módulo ColunaBase, além de funções auxiliares.
+
+TST_ESPEC.H – Arquivo header do módulo de teste referente ao módulo ColunaBase. Este arquivo possui a interface do módulo de teste específico 
+que é acoplado ao módulo de teste genérico a fim de automatizar os testes sobre o módulo.
+
+TEST_COLUNA_BASE.C – Arquivo que contém a implementação da interface de teste específico do módulo ColunaBase.
+
+
+Módulo Coluna Aleatória
+
+COLUNA_ALEATORIA.H - Arquivo header do módulo ColunaAleatoria. Ele contém a interface do módulo, oito listas desordenadas 
+e funções relacionadas a essas listas, como criação e inserção de elemento, retirada de elemento, impressão e destruição. 
+
+COLUNA_ALEATORIA.C – Arquivo que contém a implementação das funções de interface do módulo ColunaAleatoria, além de funções auxiliares.
+
+TST_ESPEC.H – Arquivo header do módulo de teste referente ao módulo ColunaAleatoria. Este arquivo possui a interface do módulo de teste específico 
+que é acoplado ao módulo de teste genérico a fim de automatizar os testes sobre o módulo.
+
+TESTCAL.C – Arquivo que contém a implementação da interface de teste específico do módulo ColunaAleatoria.
+
+
+Módulo Celula Temporaria
+
+CELULA_TEMPORARIA.H - Arquivo header do módulo CelulaTemporaria. Ele contém a interface do módulo, uma lista com quatro elementos (cartas)
+e funções como criação e inserção de elemento, retirada de elemento, impressão e destruição. 
+
+CELULA_TEMPORARIA.C – Arquivo que contém a implementação das funções de interface do módulo CelulaTemporaria, além de funções auxiliares.
+
+TST_ESPEC.H – Arquivo header do módulo de teste referente ao módulo CelulaTemporaria. Este arquivo possui a interface do módulo de teste específico 
+que é acoplado ao módulo de teste genérico a fim de automatizar os testes sobre o módulo.
+
+TESTTMP.C – Arquivo que contém a implementação da interface de teste específico do módulo CelulaTemporaria.
+
+
+
+Módulo Lista Genérica
+
+LISTA.H - Arquivo header do módulo Lista. Ele contém a interface do módulo com funções como criação e inserção de elemento da lista,
+ retirada de elemento da lista, e destruição da lista. 
+
+LISTA.C – Arquivo que contém a implementação das funções de interface do módulo Lista, além de funções auxiliares.
+
+TST_ESPEC.H – Arquivo header do módulo de teste referente ao módulo Lista. Este arquivo possui a interface do módulo de teste específico 
+que é acoplado ao módulo de teste genérico a fim de automatizar os testes sobre o módulo.
+
+TESTLIS.C – Arquivo que contém a implementação da interface de teste específico do módulo Lista.
+
+
+
+Módulo Condição de Retorno
+
+CONDICAO_RETORNO.H - Arquivo header do módulo Condição de Retorno. Ele contém um Enum com as condição de retorno usadas
+pelos demais modulos.
+
+
+Módulo Persistência
+
+PERSISTENCIA.h - Arquivo header do módulo Persistência. Ele contém a interface do módulo com funções que irão salvar e carregar
+um jogo. 
+
+PERSISTENCIA.c - Arquivo que contém a implementação das funções de interface do módulo Persistência, além de funções auxiliares.
+um jogo.
+
+TST_ESPEC.H – Arquivo header do módulo de teste referente ao módulo Persistência. Este arquivo possui a interface do módulo de teste específico 
+que é acoplado ao módulo de teste genérico a fim de automatizar os testes sobre o módulo.
+
+TestPersistencia.c - Arquivo que contém a implementação da interface de teste específico do módulo Persistência.
+
+
+Módulo Tratamento de Erro
+
+TRATAMENTO_FALHA.h - Arquivo header do módulo Tratamento de Erro. Contém a interface do módulo com funções responsáveis por tratar falhas durante a execução.
+
+TRATAMENTO_FALHA.c - Arquivo que contém a implementação das funções da interface do Módulo Tratamento de Erro
+
+
+Módulo Gerenciador
+
+Gerenciador.h - Arquivo header do módulo Gerenciador. Ele contém a interface do módulo com funções que irão operar todo
+o jogo. 
+
+Gerenciador.c - Arquivo que contém a implementação das funções de interface do módulo Gerenciador, além de funções auxiliares.
+um jogo.
+
+
+TST_ESPEC.H – Arquivo header do módulo de teste referente ao módulo Gerenciador. Este arquivo possui a interface do módulo de teste específico 
+que é acoplado ao módulo de teste genérico a fim de automatizar os testes sobre o módulo.
+
+TestGerenciador.c - Arquivo que contém a implementação da interface de teste específico do módulo Gerenciador.
+
+
+Módulo Principal
+
+Principal.c - Arquivo contém implementação da main que coordena o jogo e algumas funções auxiliares.
+
+
+Arquivos de diretivas de teste(na pasta Script)
+
+TesteBaralho.script – Arquivo script que contém os casos de teste do módulo Baralho. Este arquivo visa submeter o módulo à situações de uso reais de uma lista indicando as respectivas falhas.
+
+TesteCarta.script - Arquivo script que contém os casos de teste do módulo Carta. Este arquivo visa submeter o módulo à situações de uso reais de uma lista indicando as respectivas falhas.
+
+TesteCelulasTemp.script - Arquivo script que contém os casos de teste do módulo CelulasTemporarias. Este arquivo visa submeter o módulo à situações de uso reais de uma lista indicando as respectivas falhas.
+
+TesteColunaBase.script - Arquivo script que contém os casos de teste do módulo ColunaBase. Este arquivo visa submeter o módulo à situações de uso reais de uma lista indicando as respectivas falhas.
+
+TesteColunasAleatorias.script - Arquivo script que contém os casos de teste do módulo ColunasAleatorias. Este arquivo visa submeter o módulo à situações de uso reais de uma lista indicando as respectivas falhas.
+
+TesteLista.script – Arquivo script que contém os casos de teste do módulo lista. Este arquivo visa submeter o módulo à situações de uso reais de uma lista indicando as respectivas falhas.
+
+TestePersistencia.script - Arquivo script que contém os casos de teste do módulo Persistencia. Este arquivo visa submeter o módulo à situações de uso reais de uma lista indicando as respectivas falhas.
+
+TesteGerenciador.script – Arquivo script que contém os casos de teste do módulo Gerenciador. Este arquivo visa submeter o módulo à situações de uso reais do jogo. indicando as respectivas falhas.
+
+TesteContadoresLista.script - Arquivo script que contém os casos de teste do módulo lista. Este arquivo visa submeter o módulo à situações de uso em sejam acessadas todas as arestas do modulo.
+
+TesteDeturpaLista.script - Arquivo script que contém os casos de teste do módulo lista. Este arquivo visa submeter o módulo à situações forçadas de erros.
+
+TesteControleEspaco.script - Arquivo script que contém os casos de teste do módulo lista. Este arquivo visa submeter o módulo ao controle de espaço dinâmico.
+
+TesteListaDebug - Arquivo de script que contém casos de teste do módulo lista verificando a completeza do mesmo, segundo critério de cobertura de arestas.
+
+TesteDeturpaValor - Caso de teste do deturpador da lista genérica que faria o programa "voar". 
+
+TesteDeturpaElem - Caso de teste do deturpador da lista genérica que faria o programa "voar".
+
+TesteDeturpaCabeca - Caso de teste do deturpador da lista genérica que faria o programa "voar".
+
+DeclaracaodecontadoresLista.count - Arquivo de declaração de contadores do módulo lista.
+
+Arquivos de diretivas para compilação (na pasta Composicao)
+
+*.comp - são os arquivos de diretivas de composição dos módulos criados.
+Esse arquivo é utilizado por GMAKE para gerar as diretivas de MAKE. Este arquivo
+de diretivas destina-se a gerar a versão de produção.
+
+Tabelas(Na pasta tabelas)
+
+IdTiposEspaco.def - declara os identificadores de tipos dos espaços de dados a serem utilizados por um determinado construto.
+
+TiposEspacosLista.def - declara os identificadores de tipos dos espaços de dados utilizados pelo módulo lista.
+
+Arquivos gerados automaticamente
+
+estatística.estat (na pasta Script) – Arquivo que contém estatísticas acumuladas ao realizar vários casos de teste em uma única execução. (Existe para todos os módulos)
+
+*.txt – Arquivo que contém o laudo dos testes realizados. (Existe para todos os módulos)
+
+
+Utilitários e Ferramentas
+
+GMAKE.EXE – é um programa utilitário que gera o arquivo de diretivas MAKE a partir
+de uma descrição de composição de um construto.
+
+GMake.parm – é o arquivo de diretivas para o GMake utilizado para gerar diretivas
+MAKE para o projeto arcabouço de teste utilizando a plataforma MS-Visual C/C++. Este
+arquivo deve ser ajustado para poder compilar visando outras plataformas e outros
+projetos.
+
+GeraMake.bat – é um batch utilizado para gerar as diretivas MAKE de um determinado
+construto exemplo.
+
+Compila.bat – compila um programa utilizando um arquivo de diretivas de MAKE
+geradas por GMAKE. Este batch assume que o ambiente (environment, set, path) esteja
+corretamente configurado para que o compilador a ser utilizado compile corretamente.
+
+GeraT2 - Gera os .make de todos os modulos do trabalho 2.
+
+GeraT3 - Gera os .make de todos os modulos do trabalho 3.
+
+GeraT4 - Gera o .make do modulo lista.
+
+CompilaT2.bat – compila todos os construtos utilizados no trabalho 2 e gera a biblioteca FreeCell.lib com eles.
+
+CompilaT3.bat – compila todos os construtos utilizados no trabalho 3 usando a biblioteca FreeCell.lib.
+
+CompilaT4.bat – compila o modulo lista.
+
+LimpaTudo.bat – elimina todos os arquivos que são gerados por intermédio de alguma
+ferramenta.
+
+EXBESTATC.C, EXBESTAT.EXE – é um pequeno programa que permite exibir o arquivo
+de acumulação das estatísticas de teste. Quando um teste for formado por diversas
+massas de teste (scripts de teste) torna-se conveniente acumular as estatísticas relativas
+a cada massa, de modo que, ao final do teste de todas elas, possa-se exibir o resultado
+acumulado destas estatísticas. O arquivo TestaTudo.bat ilustra o uso desse programa.
+
+CompileBanner.C, CompileBanner.exe – é um pequeno programa que exibe um
+separador no vídeo. O programa é utilizado para exibir separadores ao compilar construtos,
+facilitando a compreensão de uma compilação agregada de diversos construtos.
+
+TestaTudo.bat – Arquivo que auxilia na execução dos testes automatizados de todos os módulos. Este arquivo contém comandos do prompt do Windows que executa o arquivo TRAB2.exe passando como parâmetro o arquivo de script.
+
+Tudo.bat - Arquivo que coordena a compilação e execução dos testes automatizados.
+
+Jogar.bat - Arquivo que executa o jogo FreeCell.

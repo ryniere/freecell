@@ -1,0 +1,66 @@
+////////////////////////////////////////////////
+//
+// Arquivo de declaração de contadores
+// Conta módulo Lista marcado
+//
+///////////////////////////////////////////////
+
+LIS_CriarLista
+LIS_DestruirLista
+LIS_EsvaziarLista
+LIS_EsvaziarLista:Retirar elemento não nulo da lista.
+LIS_InserirElementoAntes
+LIS_InserirElementoAntes: Falta de memória a criar elemento da lista.
+LIS_InserirElementoAntes: Encadeamento de elemento em lista vazia.
+LIS_InserirElementoAntes: Encadeamento de elemento em lista que contém elemento(s).
+LIS_InserirElementoAntes: Encadeamento de elemento quando o elemento corrente não é o primeiro.
+LIS_InserirElementoAntes: Encadeamento de elemento quando o elemento corrente é primeiro.
+LIS_InserirElementoApos
+LIS_InserirElementoApos: Falta de memória a criar elemento da lista.
+LIS_InserirElementoApos: Encadeamento de elemento em lista vazia.
+LIS_InserirElementoApos: Encadeamento de elemento em lista que contém elemento(s).
+LIS_InserirElementoApos: Encadeamento de elemento quando o elemento corrente não é o último.
+LIS_InserirElementoApos: Encadeamento de elemento quando o elemento corrente é o último.
+LIS_ExcluirElemento
+LIS_ExcluirElemento: Excluir elemento em lista vazia.
+LIS_ExcluirElemento: Excluir elemento que nao é origem lista.
+LIS_ExcluirElemento: Excluir origem lista.
+LIS_ExcluirElemento: Excluir elemento que nao é fim lista.
+LIS_ExcluirElemento: Excluir fim lista.
+LIS_ObterValor
+LIS_ObterValor: Obter valor de elemento corrente nulo.
+LIS_ObterValor: Obter valor de elemento corrente nao nulo.
+LIS_IrInicioLista
+LIS_IrFinalLista
+LIS_AvancarElementoCorrente
+LIS_AvancarElementoCorrente: Avancar elemento em lista vazia.
+LIS_AvancarElementoCorrente: Avancar elemento para frente e nao chegar ao fim.
+LIS_AvancarElementoCorrente: Avancar elemento para frente e chegar ao fim da lista.
+LIS_AvancarElementoCorrente: Avancar elemento para trás e nao chegar ao inicio.
+LIS_AvancarElementoCorrente: Avancar elemento para tras e chegar ao inicio da lista.
+LIS_AvancarElementoCorrente: Nao avancar elemento.
+LIS_VerificarEstruturaLista
+LIS_VerificarEstruturaLista: Encadeamento incorreto na lista.
+LIS_VerificarEstruturaLista: Numero elementos lista != numero elementos encadeados.
+LIS_Deturpar
+LIS_Deturpar: Parametro pListaParm eh nulo.
+LIS_Deturpar: Modifica o tipo cabeca.
+LIS_Deturpar: Anula ponteiro origem.
+LIS_Deturpar: Anula ponteiro fim.
+LIS_Deturpar: Anula ponteiro corrente.
+LIS_Deturpar: Faz origem apontar para lixo.
+LIS_Deturpar: Faz fim apontar para lixo.
+LIS_Deturpar: Faz corrente apontar para lixo.
+LIS_Deturpar: Deturpar espaço cabeca.
+LIS_Deturpar: Deturpa elemento.
+LIS_Deturpar: Modifica tipo elemento corrente.
+LIS_Deturpar: Anula ponteiro cabeça.
+LIS_Deturpar: Anula ponteiro anterior.
+LIS_Deturpar: Anula ponteiro proximo.
+LIS_Deturpar: Faz ponteiro cabeça apontar para lixo.
+LIS_Deturpar: Faz ponteiro anterior apontar para lixo.
+LIS_Deturpar: Faz ponteiro proximo apontar para lixo.
+LIS_Deturpar: Atribui valor fora do domínio do espaço.
+LIS_Deturpar: Deturpar espaço elemento.
+LIS_Deturpar: Elimina elemento corrente.
+LIS_Deturpar: Desencadeia elemento sem libera-lo como free.

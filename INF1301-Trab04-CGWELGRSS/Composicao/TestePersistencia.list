@@ -1,0 +1,257 @@
+GERADOR DE SCRIPT DE DIRETIVAS PARA MAKE
+   LES / Informática / PUC-Rio    Versão 6.00 (c) 2005
+
+Composição do construto: TestePersistencia.comp
+
+   Nome do Construto:           TestePersistencia
+   Diretório base:              C:\Documents and Settings\Administrador\Desktop\INF1301-Trab04-CGWELGRSS\composicao
+
+   Arquivo composição:          TestePersistencia.comp
+   Arquivo plataforma:          gmake.parm
+
+   Arquivo diretivas MAKE:      TestePersistencia.make
+   Arquivo diretivas LINK:      TestePersistencia.build
+   Arquivo listagem:            TestePersistencia.list
+
+Módulos do construto: TestePersistencia.comp
+
+   testpersistencia.c
+   persistencia.c
+
+Estatísticas do construto
+
+   Estatísticas do arquivo: baralho.h
+      Total linhas:             131
+      Linhas de código:          21
+      Linhas de comentário:      90
+      Linhas em branco:          20
+   Arquivos de inclusão de que necessita
+      carta.h
+      condicao_retorno.h
+      lista.h
+   Arquivos em que é incluído
+      colunas_aleatorias.h
+      persistencia.c
+      testpersistencia.c
+
+   Estatísticas do arquivo: carta.h
+      Total linhas:             120
+      Linhas de código:          16
+      Linhas de comentário:      87
+      Linhas em branco:          17
+   Arquivos de inclusão de que necessita
+      carta.h
+      condicao_retorno.h
+      lista.h
+   Arquivos em que é incluído
+      baralho.h
+      carta.h
+      celula_temporaria.h
+      coluna_base.h
+      colunas_aleatorias.h
+      condicao_retorno.h
+      persistencia.c
+      persistencia.h
+      testpersistencia.c
+
+   Estatísticas do arquivo: celula_temporaria.h
+      Total linhas:             165
+      Linhas de código:          21
+      Linhas de comentário:     120
+      Linhas em branco:          24
+   Arquivos de inclusão de que necessita
+      carta.h
+      condicao_retorno.h
+      lista.h
+   Arquivos em que é incluído
+      persistencia.c
+      testpersistencia.c
+
+   Estatísticas do arquivo: coluna_base.h
+      Total linhas:             229
+      Linhas de código:          37
+      Linhas de comentário:     154
+      Linhas em branco:          38
+   Arquivos de inclusão de que necessita
+      carta.h
+      condicao_retorno.h
+      lista.h
+   Arquivos em que é incluído
+      persistencia.c
+      testpersistencia.c
+
+   Estatísticas do arquivo: colunas_aleatorias.h
+      Total linhas:             265
+      Linhas de código:          36
+      Linhas de comentário:     197
+      Linhas em branco:          32
+   Arquivos de inclusão de que necessita
+      baralho.h
+      carta.h
+      condicao_retorno.h
+      lista.h
+   Arquivos em que é incluído
+      persistencia.c
+      testpersistencia.c
+
+   Estatísticas do arquivo: condicao_retorno.h
+      Total linhas:              56
+      Linhas de código:          19
+      Linhas de comentário:      23
+      Linhas em branco:          14
+   Arquivos de inclusão de que necessita
+      carta.h
+      lista.h
+   Arquivos em que é incluído
+      baralho.h
+      carta.h
+      celula_temporaria.h
+      coluna_base.h
+      colunas_aleatorias.h
+      persistencia.c
+      persistencia.h
+      testpersistencia.c
+
+   Estatísticas do arquivo: generico.h
+      Total linhas:             713
+      Linhas de código:          59
+      Linhas de comentário:     572
+      Linhas em branco:          82
+   Arquivos de inclusão de que necessita
+      tst_espc.h
+   Arquivos em que é incluído
+      testpersistencia.c
+
+   Estatísticas do arquivo: lerparm.h
+      Total linhas:             291
+      Linhas de código:          36
+      Linhas de comentário:     188
+      Linhas em branco:          67
+   Arquivos em que é incluído
+      testpersistencia.c
+
+   Estatísticas do arquivo: lista.h
+      Total linhas:             551
+      Linhas de código:          76
+      Linhas de comentário:     378
+      Linhas em branco:          97
+   Arquivos em que é incluído
+      baralho.h
+      carta.h
+      celula_temporaria.h
+      coluna_base.h
+      colunas_aleatorias.h
+      condicao_retorno.h
+      persistencia.c
+      persistencia.h
+      testpersistencia.c
+
+   Estatísticas do arquivo: persistencia.c
+      Total linhas:             552
+      Linhas de código:         215
+      Linhas de comentário:     266
+      Linhas em branco:         126
+   Arquivos de inclusão de que necessita
+      baralho.h
+      carta.h
+      celula_temporaria.h
+      coluna_base.h
+      colunas_aleatorias.h
+      condicao_retorno.h
+      lista.h
+      persistencia.h
+
+   Estatísticas do arquivo: persistencia.h
+      Total linhas:             130
+      Linhas de código:          18
+      Linhas de comentário:      92
+      Linhas em branco:          20
+   Arquivos de inclusão de que necessita
+      carta.h
+      condicao_retorno.h
+      lista.h
+   Arquivos em que é incluído
+      persistencia.c
+      testpersistencia.c
+
+   Estatísticas do arquivo: privilegiocarta.h
+      Total linhas:              73
+      Linhas de código:          12
+      Linhas de comentário:      52
+      Linhas em branco:           9
+   Arquivos em que é incluído
+      testpersistencia.c
+
+   Estatísticas do arquivo: testpersistencia.c
+      Total linhas:             375
+      Linhas de código:         190
+      Linhas de comentário:      38
+      Linhas em branco:         152
+   Arquivos de inclusão de que necessita
+      baralho.h
+      carta.h
+      celula_temporaria.h
+      coluna_base.h
+      colunas_aleatorias.h
+      condicao_retorno.h
+      generico.h
+      lerparm.h
+      lista.h
+      persistencia.h
+      privilegiocarta.h
+      tst_espc.h
+
+   Estatísticas do arquivo: tst_espc.h
+      Total linhas:             228
+      Linhas de código:          23
+      Linhas de comentário:     185
+      Linhas em branco:          20
+   Arquivos em que é incluído
+      generico.h
+      testpersistencia.c
+
+Totais por tipo de arquivo
+
+  Tipo: h        Path: ..\Fontes
+         Total linhas do tipo:      2952
+         Linhas de código:           374
+         Linhas de comentário:      2138
+         Linhas em branco:           440
+         Arquivos deste tipo:         12
+
+  Tipo: obj      Path: ..\Objetos
+         Total linhas do tipo:         0
+         Linhas de código:             0
+         Linhas de comentário:         0
+         Linhas em branco:             0
+         Arquivos deste tipo:          0
+
+  Tipo: err      Path: ..\Produto
+         Total linhas do tipo:         0
+         Linhas de código:             0
+         Linhas de comentário:         0
+         Linhas em branco:             0
+         Arquivos deste tipo:          0
+
+  Tipo: DEFAULT  Path: ..\Fontes
+         Total linhas do tipo:         0
+         Linhas de código:             0
+         Linhas de comentário:         0
+         Linhas em branco:             0
+         Arquivos deste tipo:          0
+
+  Tipo: c        Path: ..\Fontes
+         Total linhas do tipo:       927
+         Linhas de código:           405
+         Linhas de comentário:       304
+         Linhas em branco:           278
+         Arquivos deste tipo:          2
+
+Totais para todo o construto TestePersistencia
+
+   Total linhas:              3879
+   Linhas de código:           779
+   Linhas de comentário:      2442
+   Linhas em branco:           718
+   Arquivos processados:        14
+

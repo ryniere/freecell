@@ -1,0 +1,52 @@
+// Script:    TesteBaralho.script
+// Autor:     Carla Galdino Wanderley, Eliana Leite Goldner, Ryniere Santos Silva
+// Data:      02/abr/2008
+// Propósito: Testar superficialmente o módulo 
+//
+
+== Inicializar valores
+
+=declararparm   OK             int  0
+=declararparm   Erro           int  1
+
+=declararparm   pNULL          int  0
+=declararparm   pNaoNULL       int  1
+
+=declararparm	tolerancia	   int  1
+
+=declararparm	naipeCopas   	string  "copas"
+=declararparm	naipeEspadas 	string  "espadas"
+=declararparm	naipePaus  	string  "paus"
+=declararparm	naipeOuros  	string  "ouros"
+=declararparm	naipeInvalido  	string  "invalido"
+
+=declararparm	valor0  int 1
+=declararparm	valor1  int 2
+=declararparm	valor2  int 3
+=declararparm	valor3  int 5
+=declararparm	valor4  int 0
+=declararparm	valor5  int 14
+
+== Teste criar baralho	
+=criarbaralho  OK
+
+== Testar buscar carta baralho ordenado
+=buscarcartabaralhoordenado valor0 naipeCopas 	pNaoNULL
+=buscarcartabaralhoordenado valor1 naipeEspadas pNaoNULL
+=buscarcartabaralhoordenado valor2 naipeOuros	pNaoNULL
+=buscarcartabaralhoordenado valor3 naipePaus	pNaoNULL
+
+== Testar buscar carta baralho ordenado com valor invalido
+=buscarcartabaralhoordenado valor5 naipePaus	pNULL
+=buscarcartabaralhoordenado valor4 naipeEspadas pNULL
+
+== Testar buscar carta baralho ordenado com naipe invalido
+=buscarcartabaralhoordenado valor2 naipeInvalido  pNULL
+
+== Teste de retorno de embaralhamento de cartas
+=embaralhar  OK
+
+== Teste do embaralhamento de cartas
+=verificaembaralhamento	 11	 OK
+
+== Fim

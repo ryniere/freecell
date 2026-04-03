@@ -1,0 +1,45 @@
+// Script:    TesteDeturpaCabeca.script
+// Autor:     Carla Galdino, Eliana Goldner e Ryniere Silva
+// Propósito: Testar verificador da lista, deturpando a cabeça da lista 
+
+==Declara parametros
+
+=declararparm 	OK 		int 0
+=declararparm 	ListaVazia 	int 1
+=declararparm 	FimLista	int 2
+=declararparm 	NaoAchou	int 3
+=declararparm 	ErroEstrutura	int 4
+=declararparm 	FaltouMemoria	int 5
+=declararparm 	Erro		int 6
+
+=declararparm	TipoCabeca	int 1
+=declararparm	TipoElem	int 2
+	
+=declararparm   FALSE          int  0
+=declararparm   TRUE	       int  1
+
+=declararparm   str0    string  "abcdefg"
+=declararparm   str1    string  "qwerty"
+=declararparm   str2    string  "xxx"
+=declararparm   str3    string  "xpto"
+=declararparm   str4    string  "xpto2"
+
+//Modo de deturpacao 
+=declararparm 	EspacoCabeca 	int 16
+
+== Iniciar contagem
+=inicializarcontadores  "."
+
+== Determinar controle de pValores alocados para teste
+=controlarvaloresalocados	TRUE
+
+== Criar lista
+=criarlista      2
+=inselemantes    2   str0  OK
+=inselemapos     2   str1  OK
+=inselemapos     2   str2  OK
+
+== Deturpar Valor
+=deturpar        2   EspacoCabeca
+=verificarmemoria			// É possível ver que o espaço alocado para a cabeça está deturpado
+=verificarespaco  2 	TipoCabeca   // Aqui o script "voa", pois o espaço para a cabeça esta deturpado

@@ -1,0 +1,153 @@
+// Script:    TesteLista.script
+// Autor:     Arndt von Staa
+// Data:      02/abr/2008
+// Propósito: Testar o módulo lista genérica duplamente encadeada sem deturpa-la
+//
+
+== Inicializar valores
+=declararparm   lista0  int 0
+=declararparm   lista1  int 1
+=declararparm   lista2  int 2
+=declararparm	lista3  int 3
+
+=declararparm   str0    string  "abcdefg"
+=declararparm   str1    string  "qwerty"
+=declararparm   str2    string  "xxx"
+=declararparm   str3    string  "xpto"
+
+=declararparm 	OK 		int 0
+=declararparm 	ListaVazia 	int 1
+=declararparm 	FimLista	int 2
+=declararparm 	NaoAchou	int 3
+=declararparm 	ErroEstrutura	int 4
+=declararparm 	FaltouMemoria	int 5
+=declararparm 	Erro		int 6
+
+=declararparm   pNULL          int  0
+=declararparm   pNaoNULL       int  1
+
+== Iniciar contagem
+=inicializarcontadores  "..\\Produto\\TotalizacaoContadoresTesteLista"
+=lercontadores          "..\\Scripts\\DeclaracaodecontadoresLista"
+=zerartodoscontadores
+=iniciarcontagem
+
+== Criar a lista 0
+=criarlista      lista0 
+
+== Verificar ObterValor relativo a lista vazia
+=obtervalorelem  lista0   "???"     pNULL
+
+== Excluir elemento em lista vazia
+=excluirelem     lista0             ListaVazia
+
+== Inserir elemento em lista vazia
+=inselemantes    lista0   str0   OK
+=obtervalorelem  lista0   str0   pNaoNULL
+
+== Inserir elemento após primeiro
+=inselemapos     lista0   str1   OK
+=obtervalorelem  lista0   str1   pNaoNULL
+
+== Inserir elemento antes do último
+=inselemantes    lista0   str2   OK
+=obtervalorelem  lista0   str2   pNaoNULL
+
+== Excluir elemento do meio
+=obtervalorelem  lista0   str2   pNaoNULL
+=excluirelem     lista0             OK
+
+== Excluir elemento do início
+=obtervalorelem  lista0   str0   pNaoNULL
+=excluirelem     lista0             OK
+
+== Excluir elemento final, único 
+=obtervalorelem  lista0   str1   pNaoNULL
+=excluirelem     lista0             OK
+
+== Ver se a lista ficou vazia
+=obtervalorelem  lista0   "???"     pNULL
+
+== Destruir a lista
+=destruirlista   lista0
+
+== Criar uma lista com dois elementos
+=criarlista      lista1 
+=inselemapos     lista1   str0   OK
+=inselemantes     lista1   str1   OK
+
+== Testar Ir Inicio
+=irinicio	 lista1
+
+== Testar Ir Fim
+=irfinal	 lista1
+
+== Esvaziar a lista e ver se ficou vazia
+=esvaziarlista   lista1
+=obtervalorelem  lista1   "???"     pNULL
+
+
+== Destruir a lista
+=destruirlista   lista1
+
+== Criar uma lista com quatro elementos
+=criarlista      lista2 
+
+== Verificar avançar elemento em lista vazia
+=avancarelem     lista2   1      ListaVazia
+
+== Insere elementos na lista 
+=inselemapos     lista2   str0   OK
+=inselemapos     lista2   str1   OK
+=inselemapos     lista2   str2   OK
+=inselemapos     lista2   str3   OK
+
+== Testar não avançar elemento
+=avancarelem     lista2   0      OK
+
+== Verificar a lista de trás para diante
+=obtervalorelem  lista2   str3   pNaoNULL
+=avancarelem     lista2   -1     OK
+=obtervalorelem  lista2   str2   pNaoNULL
+=avancarelem     lista2   -1     OK
+=obtervalorelem  lista2   str1   pNaoNULL
+=avancarelem     lista2   -1     OK
+=obtervalorelem  lista2   str0   pNaoNULL
+=avancarelem     lista2   -1     FimLista
+
+== Verificar a lista de frente para trás
+=obtervalorelem  lista2   str0   pNaoNULL
+=avancarelem     lista2   1      OK
+=obtervalorelem  lista2   str1   pNaoNULL
+=avancarelem     lista2   1      OK
+=obtervalorelem  lista2   str2   pNaoNULL
+=avancarelem     lista2   1      OK
+=obtervalorelem  lista2   str3   pNaoNULL
+=avancarelem     lista2   1      FimLista
+
+== Verificar a lista andando demais de trás para diante
+=avancarelem     lista2   -10     FimLista
+=obtervalorelem  lista2   str0   pNaoNULL
+
+== Verificar a lista andando demais de frente para trás
+=avancarelem     lista2   10     FimLista
+=obtervalorelem  lista2   str3   pNaoNULL
+
+== Destruir a lista
+=destruirlista   lista2
+
+== Criar uma lista e posicionar elemento corrente no inicio
+=criarlista      lista3 
+=inselemapos     lista3   str0   OK
+=inselemantes    lista3   str1   OK
+=inselemantes    lista3   str2   OK
+=irinicio	 lista3
+=inselemapos     lista3   str3   OK
+
+=verificarcontagens 26
+=AceitaFalhasAcumuladas 26 // Aceita contadores da função deturpar, e falhas na lista que só ocorreriam ao deturpá-la
+
+
+=terminarcontadores  OK
+
+// fim

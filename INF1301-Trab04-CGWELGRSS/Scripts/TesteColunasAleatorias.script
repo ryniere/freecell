@@ -1,0 +1,182 @@
+// Script:    TesteColunasAleatorias.script
+// Autor:     Autores: Carla Galdino Wanderley, Eliana Leite Goldner, Ryniere dos Santos Silva
+// Data:      20/abr/2008
+// Propósito: Testar o módulo colunas aleatorias
+//
+
+== Inicializar valores
+
+=declararparm   OK             int  0
+=declararparm   AtoProibido    int  1
+=declararparm   Erro           int  2
+
+=declararparm   pNULL          int  0
+=declararparm   pNaoNULL       int  1
+
+=declararparm   Coluna1        int  1
+=declararparm   Coluna2        int  2
+=declararparm   Coluna3        int  3
+=declararparm   Coluna4        int  4
+=declararparm   Coluna5        int  5
+=declararparm   Coluna6        int  6
+=declararparm   Coluna7        int  7
+=declararparm   Coluna8        int  8
+=declararparm   Coluna9        int  9
+
+=declararparm   Carta1        int  0
+=declararparm   Carta2        int  1
+=declararparm   Carta3        int  2
+=declararparm   Carta4        int  3
+=declararparm   Carta5        int  4
+=declararparm   Carta6        int  5
+=declararparm   Carta7        int  6
+=declararparm   Carta8        int  7
+=declararparm   Carta9        int  8
+=declararparm   Carta10       int  9
+=declararparm   Carta11       int  10
+=declararparm   Carta12       int  11
+=declararparm   Carta13       int  12
+=declararparm   Carta14       int  13
+=declararparm   Carta15       int  14
+
+=declararparm   indice0        int  0
+=declararparm   indice1        int  1
+=declararparm   indice2        int  2
+=declararparm   indice3        int  3
+=declararparm   indice4        int  4
+=declararparm   indice5        int  5
+=declararparm   indice6        int  6
+=declararparm   indice7        int  7
+=declararparm   indice8        int  8
+=declararparm   indice9        int  9
+
+=declararparm   A           int  1
+=declararparm   dois        int  2
+=declararparm   tres        int  3
+=declararparm   quatro      int  4
+=declararparm   cinco       int  5
+=declararparm   seis        int  6
+=declararparm   sete        int  7
+=declararparm   oito        int  8
+=declararparm   nove        int  9
+=declararparm   dez         int  10
+=declararparm   J           int  11
+=declararparm   Q           int  12
+=declararparm   K           int  13
+
+=declararparm   Copas       string "copas"
+=declararparm   Ouros       string "ouros"
+=declararparm   Espadas     string "espadas"
+=declararparm   Paus        string "paus"
+
+
+== Criar colunas aleatorias
+=criarcolunasaleatorias OK
+
+== Obter carta em coluna aleatoria vazia
+=obtercartaaleatoria	indice1 pNULL
+
+== Obter carta em coluna inexistente
+=obtercartaaleatoria	indice0 pNULL
+=obtercartaaleatoria	indice9 pNULL
+
+== Testar imprimir colunas aleatorias vazias
+=imprimircolunasaleatorias OK
+
+==Testar Preencher colunas aleatorias
+=preenchercolunasaleatorias OK
+
+==Testar Imprimir colunas aleatorias com todas as cartas
+=imprimircolunasaleatorias OK
+
+== Obter carta coluna aleatoria
+=obtercartaaleatoria	indice1 pNaoNULL
+=obtercartaaleatoria	indice2 pNaoNULL
+=obtercartaaleatoria	indice6 pNaoNULL
+=obtercartaaleatoria	indice8 pNaoNULL
+
+==Testar Destruir colunas aleatorias
+=destruircolunasaleatorias OK
+
+==Testar Imprimir colunas aleatorias quando as colunas não existem mais (ao final do jogo)
+=imprimircolunasaleatorias Erro
+
+==Testar inserir carta quando as colunas não existem mais (ao final do jogo)
+=inserircartasequencia K Copas Carta1 Coluna1 Erro
+
+==Testar Retirar carta quando as colunas não existem mais (ao final do jogo)
+=retirarcartasequencia  Coluna8 pNULL
+
+
+==Testar Inserir carta em coluna vazia
+=criarcolunasaleatorias OK
+=inserircartasequencia K Copas Carta1 Coluna1 OK 
+
+==Testar inserir carta de naipe de cor diferente e em sequencia de valor menor
+=inserircartasequencia K Paus   Carta2 Coluna2 OK
+=inserircartasequencia Q Copas  Carta3 Coluna2 OK
+
+==Testar inserir carta de naipe de cor diferente e em sequencia de valor maior
+=inserircartasequencia K Espadas  Carta4 Coluna2 AtoProibido
+
+
+==Testar inserir carta de naipe de cor diferente e fora de sequencia
+=inserircartasequencia 10 Ouros  Carta4 Coluna3 OK
+=inserircartasequencia  8 Paus   Carta5 Coluna3 AtoProibido
+
+==Testar inserir carta de naipe de cor igual e em sequencia
+=inserircartasequencia 10 Copas  Carta6 Coluna4  OK
+=inserircartasequencia  9 Ouros  Carta7 Coluna4 AtoProibido
+
+==Testar inserir carta de naipe de cor igual e fora de sequencia
+=inserircartasequencia  K Ouros  Carta7  Coluna5  OK
+=inserircartasequencia  A Copas  Carta8 Coluna5 AtoProibido
+
+==Testar  retirar carta de coluna vazia
+=retirarcartasequencia Coluna6 pNULL 
+
+==Testar retirar carta de coluna com uma carta
+=inserircartasequencia  5 Ouros  Carta9 Coluna7  OK
+=retirarcartasequencia  Coluna7 pNaoNULL
+
+==Testar retirar carta de coluna com mais de uma carta
+=inserircartasequencia  K  Ouros   Carta10 Coluna8  OK
+=inserircartasequencia  Q  Paus    Carta11 Coluna8  OK
+=inserircartasequencia  J  Copas   Carta12 Coluna8  OK
+=inserircartasequencia  10 Espadas Carta13 Coluna8  OK
+=retirarcartasequencia  Coluna8 pNaoNULL
+
+==Testar retirar carta de coluna inexistente
+=retirarcartasequencia  Coluna9 pNULL
+
+==Testar inserir carta em coluna inexistente
+=inserircartasequencia  Q Espadas Carta14 Coluna9  Erro
+
+==Testar Imprimir colunas aleatorias parcialmente preenchidas
+=imprimircolunasaleatorias OK
+
+== Ir final coluna aleatoria
+=irfinalaleatoria	indice8 OK
+
+== Avancar elemento corrente coluna aleatoria no fim
+=avancarelemcorraleatoria	indice8 1 Erro
+
+== Recuar (avançar para trás) elemento corrente coluna aleatoria 
+=avancarelemcorraleatoria	indice8 -2 OK
+
+== Avancar elemento corrente coluna aleatoria
+=avancarelemcorraleatoria	indice8 2 OK
+
+== Recuar (avançar para trás) elemento corrente coluna aleatoria e passar do inicio
+=avancarelemcorraleatoria	indice8 -3 Erro
+
+== Avancar elemento corrente coluna aleatoria vazia
+=avancarelemcorraleatoria	indice7 1 Erro
+
+==Testar destruir colunas aleatorias parcialmente preenchidas
+=destruircolunasaleatorias OK
+
+==Resetar Cartas
+=resetcartas  
+
+// fim

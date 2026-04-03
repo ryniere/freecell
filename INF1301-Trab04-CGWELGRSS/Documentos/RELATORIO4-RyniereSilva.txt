@@ -1,0 +1,21 @@
+Aluno: 		Ryniere Silva
+Matrícula:	0620233-5
+
+
+Data		Horas Trabalhadas	Tipo de tarefa		Descrição da tarefa realizada
+
+
+19/06/09	4			Estudar			Estudo dos exemplos do arcabouço.	
+
+19/06/09	2			Codificar módulo	Criação de função de deturpação da lista.
+
+21/06/09	4			Criar script 	Criação de parte do script de teste do Deturpação.
+						de teste
+						
+21/06/09	2			Codificar módulo	Modificação do módulo de teste específico da lista.
+
+29/06/09	4			Confecção de documento	 Criação de arquivos .bat e .comp.	
+
+07/07/09    3			confecção de		Adaptação do arquivo leiame. 
+						documento
+	

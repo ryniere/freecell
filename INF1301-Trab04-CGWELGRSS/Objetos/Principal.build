@@ -1,0 +1,7 @@
+/OUT:..\produto\FreeCell.exe
+/INCREMENTAL:NO
+/MACHINE:IX86
+principal.obj  gerenciador.obj  persistencia.obj  
+FreeCell.lib
+ArcaboucoTeste.lib
+

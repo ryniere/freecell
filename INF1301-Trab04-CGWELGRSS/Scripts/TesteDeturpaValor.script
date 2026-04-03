@@ -1,0 +1,45 @@
+// Script:    TesteDeturpaValor.script
+// Autor:     Carla Galdino, Eliana Goldner e Ryniere Silva
+// Propósito: Testar verificador da lista, deturpando seu valor com conteúdo maior que seu espaço na memoria
+// O teste "voa" ao tentar desalocar pValor, porque seu conteúdo foi alterado  
+
+==Declara parametros
+
+=declararparm 	OK 		int 0
+=declararparm 	ListaVazia 	int 1
+=declararparm 	FimLista	int 2
+=declararparm 	NaoAchou	int 3
+=declararparm 	ErroEstrutura	int 4
+=declararparm 	FaltouMemoria	int 5
+=declararparm 	Erro		int 6
+
+=declararparm   str0    string  "abcdefg"
+=declararparm   str1    string  "qwerty"
+=declararparm   str2    string  "xxx"
+=declararparm   str3    string  "xpto"
+=declararparm   str4    string  "xpto2"
+
+=declararparm   FALSE          int  0
+=declararparm   TRUE	       int  1
+
+//Modo de deturpacao 
+
+=declararparm 	Valor		int 15
+
+== Iniciar contagem
+=inicializarcontadores  "."
+
+== Determinar controle de pValores alocados para teste
+=controlarvaloresalocados	TRUE
+
+== Criar lista
+=criarlista      0
+=inselemantes    0   str0  OK
+=inselemapos     0   str1  OK
+=inselemapos     0   str2  OK
+
+== Deturpar Valor
+=deturpar        0   Valor
+=verificarmemoria
+=AceitaFalhasAcumuladas 2
+=destruirlista	0

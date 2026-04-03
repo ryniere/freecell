@@ -1,0 +1,153 @@
+// Script:    TesteCarta.script
+// Autor:     Carla Galdino Wanderley, Eliana Leite Goldner, Ryniere Santos Silva
+// Data:      02/abr/2008
+// Propósito: Testar o módulo Gerenciador
+//
+
+== Inicializar valores
+
+=declararparm   TRUE	int    1
+=declararparm   FALSE	int    0
+
+=declararparm   Resp_Sim    char  'S'
+=declararparm   Resp_Nao    char  'N'
+
+=declararparm   OK             int  0
+=declararparm   AtoProibido    int  1
+=declararparm   ErroParam      int  2
+=declararparm   ErroArquivo    int  3
+=declararparm   Erro	       int  4
+
+=declararparm   LocalAleatoria  	  int  1
+=declararparm   LocalBase   	      int  2
+=declararparm   LocalTemp  			  int  3
+=declararparm   LocalInexistente	  int  4
+
+=declararparm   Jogo1		string		"InicioJogo.txt"
+=declararparm   Jogo2		string		"LocaisVazios.txt"
+=declararparm   Jogo3		string		"FimJogo.txt"
+
+=declararparm   Local1		string		"aleatoria"
+=declararparm   Local2		string		"base"
+=declararparm   Local3		string		"temporaria"
+=declararparm   Local4		string		"outro"
+
+=declararparm   indice1		int		1
+=declararparm   indice2		int		2
+=declararparm   indice3		int		3
+=declararparm   indice4		int		4
+=declararparm   indice5		int		5
+=declararparm   indice6		int		6
+=declararparm   indice7		int		7
+=declararparm   indice8		int		8
+
+==Testar Iniciar Jogo Salvo Arquivo Inexistente
+=iniciarjogo TRUE ErroArquivo
+
+== Testar iniciar Jogo novo
+=iniciarjogo FALSE OK
+
+== Testar Encerrar jogo salvando
+=encerrarjogo Resp_Sim OK
+
+==Iniciar Jogo Salvo
+=iniciarjogo  TRUE  OK
+
+==Testar atualizar tela
+=atualizartela  OK
+
+==Testar Encerrar Jogo sem salvar
+=encerrarjogo  Resp_Nao  OK
+
+==Alterar nome do arquivo a ser carregado
+=alterarnomearquivo  Jogo2
+
+==Iniciar Jogo Salvo
+=iniciarjogo  TRUE  OK
+
+==Testar atualizar tela
+=atualizartela  OK
+
+==Testar mover aleatoria sem carta para temporaria sem carta
+=movercarta	LocalAleatoria	LocalTemp	indice1 indice1  AtoProibido
+
+==Testar mover temporaria sem carta para temporaria sem carta
+=movercarta	LocalTemp  LocalTemp	indice1 indice2  AtoProibido
+
+==Testar mover aleatoria sem carta para aleatoria sem carta
+=movercarta	LocalAleatoria	LocalAleatoria	indice1 indice3  AtoProibido
+
+==Testar mover aleatoria sem carta para base sem carta
+=movercarta	LocalAleatoria	LocalBase	indice1 indice1  AtoProibido
+
+==Testar mover temporaria sem carta para base sem carta
+=movercarta	LocalTemp	LocalBase	indice1 indice1  AtoProibido
+
+==Testar mover com coluna base origem e sem carta
+=movercarta	LocalBase	LocalTemp	indice1 indice1  AtoProibido
+
+==Testar mover Ás para coluna base errada
+=movercarta	LocalAleatoria	LocalBase	indice2 indice2  AtoProibido
+=movercarta	LocalAleatoria	LocalBase	indice2 indice3  AtoProibido
+=movercarta	LocalAleatoria	LocalBase	indice2 indice4 AtoProibido
+
+==Testar mover Ás para coluna base correta
+=movercarta	LocalAleatoria	LocalBase	indice2 indice1  OK
+=movercarta	LocalAleatoria	LocalBase	indice8 indice2  OK
+=movercarta	LocalAleatoria	LocalBase	indice7 indice3  OK
+=movercarta	LocalAleatoria	LocalBase	indice5 indice4  OK
+
+==Testar mover com coluna base origem com carta
+=movercarta	LocalBase	LocalTemp	indice1 indice1  AtoProibido
+ 
+==Testar mover carta com naipe errado para coluna base
+=movercarta	LocalAleatoria	LocalBase	indice2 indice2  AtoProibido
+=movercarta	LocalAleatoria	LocalBase	indice2 indice3  AtoProibido
+=movercarta	LocalAleatoria	LocalBase	indice2 indice4  AtoProibido
+
+==Testar mover carta com valor errado para coluna base
+=movercarta	LocalAleatoria	LocalBase	indice4 indice2  AtoProibido
+=movercarta	LocalAleatoria	LocalBase	indice6 indice3  AtoProibido
+
+==Testar mover carta em sequencia para coluna base
+=movercarta	LocalAleatoria	LocalBase	indice2 indice1  OK
+=movercarta	LocalAleatoria	LocalBase	indice8 indice2  OK
+=movercarta	LocalAleatoria	LocalBase	indice7 indice3  OK
+=movercarta	LocalAleatoria	LocalBase	indice5 indice4  OK
+
+==Testar mover carta para celula temporaria vazia
+=movercarta	LocalAleatoria	LocalTemp	indice6 indice1  OK
+=movercarta LocalAleatoria	LocalTemp	indice2 indice2	 OK
+
+==Testar mover carta para celula temporaria ocupada
+=movercarta	LocalAleatoria	LocalTemp	indice6 indice1  AtoProibido
+
+==Testar mover carta para celula aleatoria com índice menor (em sequencia) que a última da coluna e naipe de cor diferente
+=movercarta LocalAleatoria	LocalAleatoria  indice4 indice2 OK
+
+==Testar mover carta para celula aleatoria com índice fora de sequencia com a última da coluna e naipe de cor diferente
+=movercarta LocalAleatoria LocalAleatoria   indice7 indice2  AtoProibido
+
+==Testar mover carta para celula aleatoria com índice menor (em sequencia) que a última da coluna e naipe de mesma cor
+=movercarta LocalAleatoria LocalAleatoria	indice4 indice2  AtoProibido
+
+==Testar fim de jogo quando o Rei de paus ainda não está no local certo
+=encerrarjogo Resp_Nao  OK
+=alterarnomearquivo  Jogo3
+=iniciarjogo TRUE OK
+=atualizartela  OK
+=testarfimjogo Erro
+
+==Testar fim de jogo quando todas as cartas estão dispostas nas colunas base
+=movercarta LocalAleatoria LocalBase indice4 indice4 OK
+=testarfimjogo OK
+
+==Testar obter local movido com string válida
+=obterlocalmovido  Local1  LocalAleatoria
+=obterlocalmovido  Local2  LocalBase
+=obterlocalmovido  Local3  LocalTemp
+
+==Testar obter local movido com string inválida
+=obterlocalmovido  Local4  LocalInexistente
+
+// fim

@@ -1,0 +1,6 @@
+/OUT:..\produto\TRAB2-4.exe
+/INCREMENTAL:NO
+/MACHINE:IX86
+testbar.obj  baralho.obj  carta.obj  
+ArcaboucoTeste.lib
+

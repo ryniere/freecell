@@ -1,0 +1,174 @@
+// Script:    TesteCelulasTemp.script
+// Autor:     Carla Galdino, Eliana Goldner, Ryniere Silva
+// Data:      21/04/2009
+// Propósito: Testar o módulo de celulas temporarias
+//
+
+
+== Inicializar valores
+
+=declararparm   valor1  int 1
+=declararparm   valor2  int 2
+=declararparm   valor3  int 3
+=declararparm   valor4  int 4
+=declararparm   valor5  int 5
+=declararparm   valor6  int 6
+=declararparm   valor7  int 7
+=declararparm   valor8  int 8
+=declararparm   valor9  int 9
+=declararparm   valor10 int 10
+=declararparm   valor11 int 11
+=declararparm   valor12 int 12
+=declararparm   valor13 int 13
+
+=declararparm   posicao1  int 1
+=declararparm   posicao2  int 2
+=declararparm   posicao3  int 3
+=declararparm   posicao4  int 4
+=declararparm   posicao5  int 5
+=declararparm   posicao6  int 0
+
+=declararparm   Carta1  int 0
+=declararparm   Carta2  int 1
+=declararparm   Carta3  int 2
+=declararparm   Carta4  int 3
+=declararparm   Carta5  int 4
+=declararparm   Carta6  int 5
+=declararparm   Carta7  int 6
+=declararparm   Carta8  int 7
+=declararparm   Carta9  int 8
+=declararparm   Carta10 int 9
+=declararparm   Carta11 int 10
+=declararparm   Carta12 int 11
+=declararparm   Carta13 int 12
+=declararparm   Carta14 int 13
+=declararparm   Carta15 int 14
+
+=declararparm   copas    string  "copas"
+=declararparm   ouros    string  "ouros"
+=declararparm   espadas	 string  "espadas"
+=declararparm   paus 	 string  "paus"
+
+=declararparm   OK             		int  0
+=declararparm   AtoProibido     	int  1
+=declararparm   Erro			int  2
+
+=declararparm   pNULL          int  0
+=declararparm   pNaoNULL       int  1
+
+=declararparm   celula1  	    int 1
+=declararparm   celula2  	    int 2
+=declararparm   celula3  	    int 3
+=declararparm   celula4  	    int 4
+=declararparm   celulainexistente1  int 5
+=declararparm   celulainexistente2  int 0
+
+== Criar celulas
+=criarcelulastemp    OK
+
+
+== Verificar inserir carta na 1ª celula temporaria
+=inserircartacelulatemp  valor1  copas Carta1 celula1 OK
+
+== Verificar inserir carta 2ª celula temporaria
+=inserircartacelulatemp  valor2  ouros Carta2  celula2 OK
+
+== Verificar inserir carta 3ª celula temporaria
+=inserircartacelulatemp  valor11  espadas Carta3  celula3 OK
+
+== Verificar inserir carta 4ª celula temporaria
+=inserircartacelulatemp  valor13  paus Carta4  celula4 OK
+
+== Verificar inserir carta em celulas temporarias ocupadas
+=inserircartacelulatemp  valor1  ouros Carta5  celula2 AtoProibido
+
+== Verificar imprimir celulas temporarias
+=imprimircelulastemp  OK
+
+
+== Verificar retirar carta em posição invalida
+=retirarcartacelulatemp  posicao5  pNULL
+=retirarcartacelulatemp  posicao6  pNULL
+
+== Verificar retirar carta na 1ª celula temporaria
+=retirarcartacelulatemp  posicao1  pNaoNULL
+
+== Verificar retirar carta na 2ª celula temporaria
+=retirarcartacelulatemp  posicao2  pNaoNULL
+
+== Verificar retirar carta na 3ª celula temporaria
+=retirarcartacelulatemp  posicao3  pNaoNULL
+
+== Verificar retirar carta na 4ª celula temporaria
+=retirarcartacelulatemp  posicao4  pNaoNULL
+
+== Verificar retirar carta em celula temporaria vazia
+=retirarcartacelulatemp  posicao1  pNULL
+
+
+== Verificar imprimir celulas temporarias vazias
+=imprimircelulastemp  OK
+
+
+== Testar destruir celulas temporarias
+=destruircelulastemp OK
+
+
+== Criar celulas
+=criarcelulastemp   OK
+
+== Verificar obter carta em celula vazia
+=obtercartacelulastemp	celula1	pNULL
+
+== Verificar obter carta em celula inexistente
+=obtercartacelulastemp	celulainexistente1 pNULL
+=obtercartacelulastemp	celulainexistente2 pNULL
+
+== Verificar inserir carta na 1ª celula temporaria
+=inserircartacelulatemp  valor3  ouros Carta6 celula1 OK
+
+== Verificar inserir carta 2ª celula temporaria
+=inserircartacelulatemp  valor4  copas Carta7 celula2 OK
+
+== Verificar inserir carta 3ª celula temporaria
+=inserircartacelulatemp  valor5  paus Carta8 celula3 OK
+
+== Verificar inserir carta 4ª celula temporaria
+=inserircartacelulatemp  valor6  espadas Carta9 celula4 OK
+
+== Verificar imprimir celulas temporarias
+=imprimircelulastemp  OK
+
+== Verificar obter carta
+=obtercartacelulastemp	celula1	pNaoNULL
+=obtercartacelulastemp	celula2	pNaoNULL
+=obtercartacelulastemp	celula3	pNaoNULL
+=obtercartacelulastemp	celula4	pNaoNULL
+
+== Verificar retirar carta 2ª celula e depois inserir
+=retirarcartacelulatemp  posicao2  pNaoNULL
+=inserircartacelulatemp  valor7  paus Carta10  celula2 OK
+=imprimircelulastemp	 OK
+
+== Verificar retirar carta 3ª celula e depois inserir
+=retirarcartacelulatemp  posicao3  pNaoNULL
+=inserircartacelulatemp  valor8  copas Carta11 celula3 OK
+=imprimircelulastemp	 OK
+
+== Verificar retirar carta 4ª celula e depois inserir
+=retirarcartacelulatemp  posicao4  pNaoNULL
+=inserircartacelulatemp  valor9  ouros Carta12  celula4 OK
+=imprimircelulastemp	 OK
+
+== Verificar retirar carta 1ª celula e depois inserir
+=retirarcartacelulatemp  posicao1  pNaoNULL
+=inserircartacelulatemp  valor12  espadas Carta13  celula1 OK
+=imprimircelulastemp	 OK
+
+== Destruir celulas temporarias
+=destruircelulastemp OK
+
+==Resetar cartas
+=resetcartas
+
+// fim

@@ -1,0 +1,26 @@
+# Composicao do programa de teste de uma lista genérica duplamente encadeada
+# Este exemplo utiliza o arcabouço completo 
+
+[Diretorios]
+
+Nome        =  TesteListaDebug
+PathDefault =  ..\Fontes
+err         =  ..\Produto
+obj         =  ..\Objetos
+c           =  ..\Fontes
+h           =  ..\Fontes
+
+[Modulos]
+TestLis	/D_DEBUG
+Lista	/D_DEBUG
+TRATAMENTO_FALHA /D_DEBUG
+
+[BuildInicio]
+/OUT:..\produto\TRAB4-1.exe
+/INCREMENTAL:NO
+/MACHINE:IX86
+
+[BuildFim]
+ArcaboucoTeste.lib
+
+[Fim]

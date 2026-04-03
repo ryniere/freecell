@@ -1,0 +1,116 @@
+Roteiro de testes para o jogo paciência FREECELL
+
+ - Inicie o jogo como descrito no arquivo leia-me.
+ 
+ 1.0 - Caso exista um arquivo com o nome "JogoSalvo.txt" no diretório do arquivo executável, delete-o.
+
+ - Caso em que se deseja iniciar um jogo salvo, mas o arquivo de jogo não existe.
+ 
+ 1.1 - Ao aparecer o menu inicial, escolha a opção de iniciar jogo salvo digitando 2.
+		Resultado esperado:	Deverá aparecer a mensagem "Nao foi possivel recuperar o ultimo jogo. Arquivo de configuracoes nao existe." 
+		e em seguida o menu inicial.
+
+ - Caso em que se deseja iniciar um novo jogo
+ 
+ 2.0 - Escolha a opção de inicia novo jogo digitando 1.
+		Resultado esperado: A interface com o usuário deverá aparecer na tela. As colunas base devem apenas indicar seus respectivos naipes,
+		todas as células temporárias devem estar vazias e todas as cartas do baralho devem se encontrar distribuídas entre as colunas aleatórias, 
+		além de aparecer uma mensagem solicitando um novo comando.
+		
+ - Caso em que se deseja mover uma carta de uma coluna aleatória para uma célula temporária vazia
+ 
+  3.0 - Digite o comando: mover aleatoria 1 temporaria 1
+		Resultado esperado: A tela deve ser atualizada e a carta que se encontrava no fim da primeira coluna aleatoria aparecer na primeira célula
+		base e desaparecer da coluna aleatória.
+		
+  - Caso em que se deseja mover uma carta de uma coluna aleatória para uma célula temporária que contém carta
+		Digite novamente o comando: mover aleatoria 1 temporaria 1
+		Resultado esperado: Deverá aparecer a mensagem: "As regras nao permitem que este movimento seja realizado. Tente novamente! "
+		
+  - Caso em que se deseja mover um Ás para a coluna base de mesmo naipe
+		Digite o comando: mover aleatoria <indice1> base <indice2>    - onde indice 1 representa o índice da coluna aleatoria que contem o Ás como última carta e 
+		índice2 é o índice da coluna base de naipe correspondente a este Ás.
+		Resultado esperado: O Ás deverá sair da coluna aleatória correspondente ao indice e aparecer na coluna base correspondente ao indice.
+		
+  - Caso em que se deseja mover um Ás para a coluna base de naipe diferente
+  		Digite o comando: mover aleatoria <indice1> base <indice2>    - onde indice 1 representa o índice da coluna aleatoria que contem o Ás como última carta e 
+		índice2 é o índice da coluna base de naipe diferente deste Ás.
+		Resultado esperado: Deverá aparecer a mensagem "As regras nao permitem que este movimento seja realizado. Tente novamente! ".
+		
+  - Caso em que se deseja mover uma carta fora de sequência para uma coluna base, mas com mesmo naipe da coluna (coluna vazia)
+    	Digite o comando: mover aleatoria <indice1> base <indice2>    - onde indice 1 representa o índice da coluna aleatoria que contem a carta desejada e 
+		índice2 é o índice da coluna base de naipe igual ao desta carta.
+		Resultado esperado: Deverá aparecer a mensagem "As regras nao permitem que este movimento seja realizado. Tente novamente! ".
+		
+  - Caso em que se deseja mover uma carta fora de sequência para uma coluna base, mas com mesmo naipe da coluna (coluna com carta(s))
+		Digite o comando: mover aleatoria <indice1> base <indice2>    - onde indice 1 representa o índice da coluna aleatoria que contem a carta desejada e 
+		índice2 é o índice da coluna base de naipe igual ao desta carta.
+		Resultado esperado: Deverá aparecer a mensagem "As regras nao permitem que este movimento seja realizado. Tente novamente! ".
+		
+  - Caso em que se deseja mover uma carta fora de sequência para uma coluna base, mas com naipe diferente da coluna (coluna vazia)
+    	Digite o comando: mover aleatoria <indice1> base <indice2>    - onde indice 1 representa o índice da coluna aleatoria que contem a carta desejada e 
+		índice2 é o índice da coluna base de naipe diferente ao desta carta.
+		Resultado esperado: Deverá aparecer a mensagem "As regras nao permitem que este movimento seja realizado. Tente novamente! ".
+		
+  - Caso em que se deseja mover uma carta fora de sequência para uma coluna base, mas com naipe diferente da coluna (coluna com carta(s))
+		Digite o comando: mover aleatoria <indice1> base <indice2>    - onde indice 1 representa o índice da coluna aleatoria que contem a carta desejada e 
+		índice2 é o índice da coluna base de naipe diferente ao desta carta.
+		Resultado esperado: Deverá aparecer a mensagem "As regras nao permitem que este movimento seja realizado. Tente novamente! ".
+		
+  - Caso em que se deseja mover uma carta em sequência para uma coluna base e ela é do mesmo naipe que a coluna base
+  		Digite o comando: mover aleatoria <indice1> base <indice2>    - onde indice 1 representa o índice da coluna aleatoria que contem a carta desejada e 
+		índice2 é o índice da coluna base com naipe correspondente à esta carta.
+		Resultado esperado: A carta deverá sair da coluna aleatória correspondente ao indice1 e aparecer na coluna base correspondente ao indice2.
+		
+  - Caso em que se deseja mover uma carta qualquer para uma coluna aleatória vazia
+		Digite o comando: mover aleatoria <indice1> aleatoria <indice2>    - onde indice 1 representa o índice da coluna aleatoria que contem a carta desejada e 
+		índice2 é o índice da coluna aleatoria vazia.
+		Resultado esperado: A carta deverá sair da coluna aleatória correspondente ao indice1 e aparecer na coluna aleatoria correspondente ao indice2 
+		como sua única carta.
+		
+  - Caso em que se deseja mover uma carta para uma coluna aleatória quando a última carta desta coluna tem o naipe da mesma cor que a carta movida.
+  		Digite o comando: mover aleatoria <indice1> aleatoria <indice2>    - onde indice 1 representa o índice da coluna aleatoria que contem a carta desejada e 
+		índice2 é o índice da outra coluna aleatoria.
+		Resultado esperado: Deverá aparecer a mensagem "As regras nao permitem que este movimento seja realizado. Tente novamente! ".
+  
+  - Caso em que se deseja mover uma carta para uma coluna aleatória quando a última carta desta coluna tem o naipe de cor diferente da carta movida.
+    	Digite o comando: mover aleatoria <indice1> aleatoria <indice2>    - onde indice 1 representa o índice da coluna aleatoria que contem a carta desejada e 
+		índice2 é o índice da outra coluna aleatoria.
+		Resultado esperado: A carta deverá sair da coluna aleatória correspondente ao indice1 e aparecer na coluna aleatoria correspondente ao indice2 
+		como sua única carta.
+		
+  - Caso em que se deseja mover carta de uma coluna aleatória vazia.
+    	Digite o comando: mover aleatoria <indice1> aleatoria <indice2>    - onde indice 1 representa o índice da coluna aleatoria vazia e 
+		índice2 é o índice da outra coluna aleatoria.
+		Resultado esperado: Deverá aparecer a mensagem "As regras nao permitem que este movimento seja realizado. Tente novamente! ".
+		
+  - Caso em que se deseja mover carta de uma célula temporária vazia.
+	    Digite o comando: mover temporaria <indice1> aleatoria <indice2>    - onde indice 1 representa o índice da célula temporária vazia e 
+		índice2 é o índice da outra coluna aleatoria.
+		Resultado esperado: Deverá aparecer a mensagem "As regras nao permitem que este movimento seja realizado. Tente novamente! ".
+		
+  - Caso em que se deseja mover carta de uma coluna base.
+		Digite o comando: mover base <indice1> aleatoria <indice2>    - onde indice 1 representa o índice da coluna base e 
+		índice2 é o índice da outra coluna aleatoria.
+		Resultado esperado: Deverá aparecer a mensagem "As regras nao permitem que este movimento seja realizado. Tente novamente! ".
+		
+
+ - Caso em que se deseja sair do jogo sem salvar
+   3.0 - Digite o comando: fim.
+		Resultado esperado: Deverá aparecer a mensagem: "Deseja salvar o jogo? (Digite S para sim e N para nao.)"
+		
+		3.1 - Digite N.
+		Resultado esperado: o jogo será encerrado.
+		
+ - Caso em que se deseja sair do jogo salvando
+	4.0 - Inicie o jogo novamente
+		4.1 - Digite o comando: fim.
+		Resultado esperado: Deverá aparecer a mensagem: "Deseja salvar o jogo? (Digite S para sim e N para nao.)"
+		
+		3.1 - Digite S.
+		Resultado esperado: o jogo será encerrado.
+		
+  - Caso em que se deseja carregar um jogo salvo
+  	5.0 - Inicie o jogo novamente
+		5.1 - Ao aparecer o menu inicial, escolha a opção de iniciar jogo salvo digitando 2.
+		Resultado esperado:	Deverá carregar o jogo no mesmo estado que foi salvo anteriormente.

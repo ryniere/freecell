@@ -1,0 +1,288 @@
+GERADOR DE SCRIPT DE DIRETIVAS PARA MAKE
+   LES / Informática / PUC-Rio    Versão 6.00 (c) 2005
+
+Composição do construto: TesteGerenciador.comp
+
+   Nome do Construto:           TesteGerenciador
+   Diretório base:              C:\Documents and Settings\Administrador\Desktop\INF1301-Trab04-CGWELGRSS\composicao
+
+   Arquivo composição:          TesteGerenciador.comp
+   Arquivo plataforma:          gmake.parm
+
+   Arquivo diretivas MAKE:      TesteGerenciador.make
+   Arquivo diretivas LINK:      TesteGerenciador.build
+   Arquivo listagem:            TesteGerenciador.list
+
+Módulos do construto: TesteGerenciador.comp
+
+   testgerenciador.c
+   gerenciador.c
+   persistencia.c
+
+Estatísticas do construto
+
+   Estatísticas do arquivo: baralho.h
+      Total linhas:             131
+      Linhas de código:          21
+      Linhas de comentário:      90
+      Linhas em branco:          20
+   Arquivos de inclusão de que necessita
+      carta.h
+      condicao_retorno.h
+      lista.h
+   Arquivos em que é incluído
+      colunas_aleatorias.h
+      gerenciador.c
+      persistencia.c
+      testgerenciador.c
+
+   Estatísticas do arquivo: carta.h
+      Total linhas:             120
+      Linhas de código:          16
+      Linhas de comentário:      87
+      Linhas em branco:          17
+   Arquivos de inclusão de que necessita
+      carta.h
+      condicao_retorno.h
+      lista.h
+   Arquivos em que é incluído
+      baralho.h
+      carta.h
+      celula_temporaria.h
+      coluna_base.h
+      colunas_aleatorias.h
+      condicao_retorno.h
+      gerenciador.c
+      persistencia.c
+      persistencia.h
+      testgerenciador.c
+
+   Estatísticas do arquivo: celula_temporaria.h
+      Total linhas:             165
+      Linhas de código:          21
+      Linhas de comentário:     120
+      Linhas em branco:          24
+   Arquivos de inclusão de que necessita
+      carta.h
+      condicao_retorno.h
+      lista.h
+   Arquivos em que é incluído
+      gerenciador.c
+      persistencia.c
+      testgerenciador.c
+
+   Estatísticas do arquivo: coluna_base.h
+      Total linhas:             229
+      Linhas de código:          37
+      Linhas de comentário:     154
+      Linhas em branco:          38
+   Arquivos de inclusão de que necessita
+      carta.h
+      condicao_retorno.h
+      lista.h
+   Arquivos em que é incluído
+      gerenciador.c
+      persistencia.c
+      testgerenciador.c
+
+   Estatísticas do arquivo: colunas_aleatorias.h
+      Total linhas:             265
+      Linhas de código:          36
+      Linhas de comentário:     197
+      Linhas em branco:          32
+   Arquivos de inclusão de que necessita
+      baralho.h
+      carta.h
+      condicao_retorno.h
+      lista.h
+   Arquivos em que é incluído
+      gerenciador.c
+      persistencia.c
+      testgerenciador.c
+
+   Estatísticas do arquivo: condicao_retorno.h
+      Total linhas:              56
+      Linhas de código:          19
+      Linhas de comentário:      23
+      Linhas em branco:          14
+   Arquivos de inclusão de que necessita
+      carta.h
+      lista.h
+   Arquivos em que é incluído
+      baralho.h
+      carta.h
+      celula_temporaria.h
+      coluna_base.h
+      colunas_aleatorias.h
+      gerenciador.c
+      persistencia.c
+      persistencia.h
+      testgerenciador.c
+
+   Estatísticas do arquivo: generico.h
+      Total linhas:             713
+      Linhas de código:          59
+      Linhas de comentário:     572
+      Linhas em branco:          82
+   Arquivos de inclusão de que necessita
+      tst_espc.h
+   Arquivos em que é incluído
+      testgerenciador.c
+
+   Estatísticas do arquivo: gerenciador.c
+      Total linhas:             423
+      Linhas de código:         237
+      Linhas de comentário:     139
+      Linhas em branco:          74
+   Arquivos de inclusão de que necessita
+      baralho.h
+      carta.h
+      celula_temporaria.h
+      coluna_base.h
+      colunas_aleatorias.h
+      condicao_retorno.h
+      gerenciador.h
+      lista.h
+      persistencia.h
+
+   Estatísticas do arquivo: gerenciador.h
+      Total linhas:             244
+      Linhas de código:          35
+      Linhas de comentário:     171
+      Linhas em branco:          38
+   Arquivos em que é incluído
+      gerenciador.c
+
+   Estatísticas do arquivo: lerparm.h
+      Total linhas:             291
+      Linhas de código:          36
+      Linhas de comentário:     188
+      Linhas em branco:          67
+   Arquivos em que é incluído
+      testgerenciador.c
+
+   Estatísticas do arquivo: lista.h
+      Total linhas:             551
+      Linhas de código:          76
+      Linhas de comentário:     378
+      Linhas em branco:          97
+   Arquivos em que é incluído
+      baralho.h
+      carta.h
+      celula_temporaria.h
+      coluna_base.h
+      colunas_aleatorias.h
+      condicao_retorno.h
+      gerenciador.c
+      persistencia.c
+      persistencia.h
+      testgerenciador.c
+
+   Estatísticas do arquivo: persistencia.c
+      Total linhas:             552
+      Linhas de código:         215
+      Linhas de comentário:     266
+      Linhas em branco:         126
+   Arquivos de inclusão de que necessita
+      baralho.h
+      carta.h
+      celula_temporaria.h
+      coluna_base.h
+      colunas_aleatorias.h
+      condicao_retorno.h
+      lista.h
+      persistencia.h
+
+   Estatísticas do arquivo: persistencia.h
+      Total linhas:             130
+      Linhas de código:          18
+      Linhas de comentário:      92
+      Linhas em branco:          20
+   Arquivos de inclusão de que necessita
+      carta.h
+      condicao_retorno.h
+      lista.h
+   Arquivos em que é incluído
+      gerenciador.c
+      persistencia.c
+
+   Estatísticas do arquivo: privilegiocarta.h
+      Total linhas:              73
+      Linhas de código:          12
+      Linhas de comentário:      52
+      Linhas em branco:           9
+   Arquivos em que é incluído
+      testgerenciador.c
+
+   Estatísticas do arquivo: testgerenciador.c
+      Total linhas:             227
+      Linhas de código:         119
+      Linhas de comentário:      55
+      Linhas em branco:          60
+   Arquivos de inclusão de que necessita
+      baralho.h
+      carta.h
+      celula_temporaria.h
+      coluna_base.h
+      colunas_aleatorias.h
+      condicao_retorno.h
+      generico.h
+      lerparm.h
+      lista.h
+      privilegiocarta.h
+      tst_espc.h
+
+   Estatísticas do arquivo: tst_espc.h
+      Total linhas:             228
+      Linhas de código:          23
+      Linhas de comentário:     185
+      Linhas em branco:          20
+   Arquivos em que é incluído
+      generico.h
+      testgerenciador.c
+
+Totais por tipo de arquivo
+
+  Tipo: h        Path: ..\Fontes
+         Total linhas do tipo:      3196
+         Linhas de código:           409
+         Linhas de comentário:      2309
+         Linhas em branco:           478
+         Arquivos deste tipo:         13
+
+  Tipo: obj      Path: ..\Objetos
+         Total linhas do tipo:         0
+         Linhas de código:             0
+         Linhas de comentário:         0
+         Linhas em branco:             0
+         Arquivos deste tipo:          0
+
+  Tipo: err      Path: ..\Produto
+         Total linhas do tipo:         0
+         Linhas de código:             0
+         Linhas de comentário:         0
+         Linhas em branco:             0
+         Arquivos deste tipo:          0
+
+  Tipo: DEFAULT  Path: ..\Fontes
+         Total linhas do tipo:         0
+         Linhas de código:             0
+         Linhas de comentário:         0
+         Linhas em branco:             0
+         Arquivos deste tipo:          0
+
+  Tipo: c        Path: ..\Fontes
+         Total linhas do tipo:      1202
+         Linhas de código:           571
+         Linhas de comentário:       460
+         Linhas em branco:           260
+         Arquivos deste tipo:          3
+
+Totais para todo o construto TesteGerenciador
+
+   Total linhas:              4398
+   Linhas de código:           980
+   Linhas de comentário:      2769
+   Linhas em branco:           738
+   Arquivos processados:        16
+

@@ -1,0 +1,7 @@
+/OUT:..\produto\TRAB2-1.exe
+/INCREMENTAL:NO
+/MACHINE:IX86
+testcalt.obj  colunas_aleatorias.obj  baralho.obj  lista.obj  tratamento_falha.obj  
+carta.obj  
+ArcaboucoTeste.lib
+

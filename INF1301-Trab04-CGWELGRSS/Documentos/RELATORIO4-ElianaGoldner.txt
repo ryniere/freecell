@@ -1,0 +1,58 @@
+Aluno: 		Eliana Leite Goldner
+Matrícula:	0712600
+
+
+Data		Horas Trabalhadas	Tipo de tarefa		Descrição da tarefa realizada
+
+
+17/06/09	4			Estudar			Estudo das aulas sobre instrumentação, da documentação e exemplos do arcabouço.	
+
+19/06/09	2			Codificar módulo	Criação dos arquivos para identificação de tipos, e inclusão de novas assertivas em
+								algumas funções do módulo lista.
+
+20/06/09	4			Codificar módulo	Inclusão de assertivas em outras funções do módulo lista.
+
+21/06/09	3,5			Codificar módulo	Merge com arquivos do grupo e implementação das  funções Verificar Lista e Verificar 
+								Cabeca para teste de verificação.
+
+21/06/09	2			Codificar módulo	Inserção de contadores em algumas funções do módulo lista e criação do arquivo de declaração
+								de contadores.
+
+22/06/09	1			Codificar módulo	Verificação de espaços alocados em todos os módulos, e momentos em que são desalocados. 
+								Caso haja estrutura não liberada após seu uso, liberação da mesma.
+
+22/06/09	0,5			Revisar 		Decisão de criar um módulo de tratamento de falhas.
+					especificações
+
+26/06/09	1			Codificar módulo	Inspeção dos outros módulos do trabalho, além do módulo lista,a procura de assertivas 
+								executáveis ainda não implementadas e inclusão  das mesmas.
+
+27/06/09	2,5			Projetar		Alteração do modelo físico adicionando estruturas redundantes.
+
+02/07/09	2			Codificar módulo	Criação do módulo de tratamento de falhas, com funções previamente criadas.
+
+02/07/09	2,5			Codificar módulo	Substituição de chamadas a função assert de C, para funções do módulo de tratamento de
+								falhas, uma vez que o assert aborta o programa sem arrumar a casa.
+
+05/07/09	3			Revisar script		Revisão do script de teste do deturpador, a procura de erros e criação de novos
+					de teste		casos de teste.
+
+05/07/09	3,5			Realizar os testes	Realização do teste do deturpador, para obter o número de falhas  
+					Diagnosticar e 		encontradas. Revisão do código nos pontos onde foram encontradas falhas 
+					corrigir problemas	e correção do mesmo.
+					encontrados
+
+
+06/07/09	5			Realizar os testes	Realização do teste do deturpador, para obter o número de falhas  
+					Diagnosticar e 		encontradas. Revisão do código nos pontos onde foram encontradas falhas 
+					corrigir problemas	e correção do mesmo. Criação de novos casos de teste e quando necessario mudanças
+					encontrados		nos módulos envolvidos no teste. 
+
+06/07/09	2			Revisar script		Inclusão de contadores no script de teste do módulo lista para verificar completeza
+					de teste		do teste segundo o critério de cobertura de arestas. Criação de novos casos de teste
+								até que o mesmo esteja completo.
+
+06/07/09	1,5			Realizar os testes	Realização de todos os testes, para obter o número de falhas  
+					Diagnosticar e 		encontradas. Revisão do código nos pontos onde foram encontradas falhas 
+					corrigir problemas	e correção do mesmo.
+					encontrados

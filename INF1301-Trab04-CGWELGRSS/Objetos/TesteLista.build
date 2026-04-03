@@ -1,0 +1,6 @@
+/OUT:..\produto\TRAB2-6.exe
+/INCREMENTAL:NO
+/MACHINE:IX86
+testlis.obj  lista.obj  tratamento_falha.obj  
+ArcaboucoTeste.lib
+

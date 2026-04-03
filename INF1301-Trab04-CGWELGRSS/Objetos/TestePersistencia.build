@@ -1,0 +1,7 @@
+/OUT:..\produto\TRAB3-1.exe
+/INCREMENTAL:NO
+/MACHINE:IX86
+testpersistencia.obj  persistencia.obj  
+FreeCell.lib
+ArcaboucoTeste.lib
+

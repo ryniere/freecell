@@ -1,0 +1,39 @@
+Aluno: 		Carla Galdino Wanderley
+Matrícula:	0713101
+
+
+Data		Horas Trabalhadas	Tipo de tarefa		Descrição da tarefa realizada
+
+
+17/06/09	4			Estudar			Estudo sobre os conteúdos dados em sala, documentação para o trabalho e exemplo da árvore do arcabouço.	
+
+19/06/09	2			Codificar módulo	Criação de função de verificação de integridade da lista.
+
+20/06/09	4			Codificar módulo	Inclusão e manutençao de funções de verificação.
+
+21/06/09	2			Codificar módulo	Distribuição de contadores do módulo CONTA.H através do código do módulo lista.
+
+
+22/06/09	0,5			Revisar 		Decisão de criar um módulo de tratamento de falhas.
+					especificações
+
+26/06/09	1			Codificar módulo	Implementação do módulo de tratamento de falhas.
+
+
+05/07/09	5			Revisar script		Criação de script do teste de contadores de arestas do código.
+					de teste		casos de teste.
+
+05/07/09	3,5			Realizar os testes	  Concomitantemente com a criação do script de teste
+					Diagnosticar e 				houve o conserto de falhas encontradas.
+					corrigir problemas	
+					encontrados
+					
+06/07/09	4			Estudar			 Reestudo das aulas de instrumentação com foco na parte de controle de espaços alocados.	
+
+06/07/09	5			Realizar os testes	  Criação de script do teste de controle de espaços alocados. 
+					Diagnosticar e 		verificação de falhas decorrentes e solução das mesmas.
+					corrigir problemas	
+					encontrados		
+
+07/07/09	2			Revisar script		Criação do arquivo de linguagem de script correspondente às funções de verificação.
+					de teste		

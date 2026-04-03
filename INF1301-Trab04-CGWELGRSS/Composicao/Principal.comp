@@ -1,0 +1,28 @@
+# Composicao do Jogo Freecell
+# Este exemplo utiliza o arcabouço completo 
+
+[Diretorios]
+
+Nome        =  Principal
+PathDefault =  ..\Fontes
+err         =  ..\Produto
+obj         =  ..\Objetos
+c           =  ..\Fontes
+h           =  ..\Fontes
+
+[Modulos]
+Principal
+Gerenciador
+PERSISTENCIA
+
+[BuildInicio]
+/OUT:..\produto\FreeCell.exe
+/INCREMENTAL:NO
+/MACHINE:IX86
+
+[BuildFim]
+FreeCell.lib
+ArcaboucoTeste.lib
+
+
+[Fim]

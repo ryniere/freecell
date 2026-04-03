@@ -1,0 +1,86 @@
+// Script:    TesteCarta.script
+// Autor:     Carla Galdino Wanderley, Eliana Leite Goldner, Ryniere Santos Silva
+// Data:      02/abr/2008
+// Propósito: Testar superficialmente o módulo 
+//
+
+== Inicializar valores
+
+=declararparm   OK             int  0
+=declararparm   Erro           int  1
+
+=declararparm   pNULL          int  0
+=declararparm   pNaoNULL       int  1
+
+=declararparm   carta0  int 0
+=declararparm   carta1  int 1
+=declararparm   carta2  int 2
+=declararparm   carta3  int 3
+=declararparm   carta4  int 4
+=declararparm   carta5  int 5
+=declararparm   carta6  int 6
+=declararparm   carta7  int 7
+=declararparm   carta8  int 8
+=declararparm   carta9  int 9
+
+=declararparm	valor0  int 1
+=declararparm	valor1  int 2
+=declararparm	valor2  int 3
+=declararparm	valor3  int 5
+=declararparm	valor4  int 0
+=declararparm	valor5  int 14
+
+=declararparm	codigo0  int 65
+=declararparm	codigo1  int 2
+=declararparm	codigo2  int 3
+=declararparm	codigo3  int 5
+
+=declararparm	naipeCopas   	string  "copas"
+=declararparm	naipeEspadas 	string  "espadas"
+=declararparm	naipePaus  	string  "paus"
+=declararparm	naipeOuros  	string  "ouros"
+=declararparm	naipeInvalido  	string  "invalido"	
+
+== Criar carta
+=criarcarta	   carta0	valor0	naipeCopas	pNaoNULL
+=criarcarta	   carta1	valor1	naipeEspadas	pNaoNULL
+=criarcarta	   carta2	valor2	naipeOuros	pNaoNULL  
+
+== Criar carta com parametro invalido
+=criarcarta	   carta3	valor4	naipeCopas	pNULL
+=criarcarta	   carta4	valor5	naipePaus	pNULL
+=criarcarta	   carta4	valor3	naipeInvalido	pNULL
+
+== Destruir Carta
+=destruircarta  carta2
+
+== Obter Valor Carta
+=obtervalorcarta	carta0	valor0	OK
+=obtervalorcarta	carta1	valor1	OK
+
+== Obter Valor Carta Valores errados
+=obtervalorcarta	carta0	valor2	Erro
+=obtervalorcarta	carta1	valor3	Erro
+
+== Obter Naipe Carta
+=obternaipecarta	carta0	naipeCopas    OK
+=obternaipecarta	carta1	naipeEspadas  OK
+
+== Obter Naipe Carta Naipes errados
+=obternaipecarta	carta0	naipeOuros    Erro
+=obternaipecarta	carta1	naipePaus     Erro
+
+== Obter Codigo Carta
+=obtercodigocarta	carta0	codigo0  OK
+=obtercodigocarta	carta1	codigo1  OK
+
+== Obter Codigo Carta Códigos errados
+=obtercodigocarta	carta0	codigo2  Erro
+=obtercodigocarta	carta1	codigo3  Erro
+
+== Imprimir carta
+
+=imprimircarta  carta1
+
+
+// fim

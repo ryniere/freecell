@@ -1,0 +1,6 @@
+/OUT:..\produto\TRAB2-3.exe
+/INCREMENTAL:NO
+/MACHINE:IX86
+testtmp.obj  celula_temporaria.obj  lista.obj  tratamento_falha.obj  carta.obj  
+ArcaboucoTeste.lib
+

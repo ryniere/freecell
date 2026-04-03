@@ -1,0 +1,67 @@
+//////////////////////////////////////////////////////////////////////
+// Contadores acumulados, gerado: 2009/07/07-04:24:15
+//////////////////////////////////////////////////////////////////////
+
+LIS_AvancarElementoCorrente\=4
+LIS_AvancarElementoCorrente: Avancar elemento em lista vazia.\=2
+LIS_AvancarElementoCorrente: Avancar elemento para frente e chegar ao fim da lista.\=0
+LIS_AvancarElementoCorrente: Avancar elemento para frente e nao chegar ao fim.\=1
+LIS_AvancarElementoCorrente: Avancar elemento para tras e chegar ao inicio da lista.\=0
+LIS_AvancarElementoCorrente: Avancar elemento para trás e nao chegar ao inicio.\=1
+LIS_AvancarElementoCorrente: Nao avancar elemento.\=0
+LIS_CriarLista\=4
+LIS_DestruirLista\=1
+LIS_Deturpar\=0
+LIS_Deturpar: Anula ponteiro anterior.\=0
+LIS_Deturpar: Anula ponteiro cabeça.\=0
+LIS_Deturpar: Anula ponteiro corrente.\=0
+LIS_Deturpar: Anula ponteiro fim.\=0
+LIS_Deturpar: Anula ponteiro origem.\=0
+LIS_Deturpar: Anula ponteiro proximo.\=0
+LIS_Deturpar: Atribui valor fora do domínio do espaço.\=0
+LIS_Deturpar: Desencadeia elemento sem libera-lo como free.\=0
+LIS_Deturpar: Deturpa elemento.\=0
+LIS_Deturpar: Deturpar espaço cabeca.\=0
+LIS_Deturpar: Deturpar espaço elemento.\=0
+LIS_Deturpar: Elimina elemento corrente.\=0
+LIS_Deturpar: Faz corrente apontar para lixo.\=0
+LIS_Deturpar: Faz fim apontar para lixo.\=0
+LIS_Deturpar: Faz origem apontar para lixo.\=0
+LIS_Deturpar: Faz ponteiro anterior apontar para lixo.\=0
+LIS_Deturpar: Faz ponteiro cabeça apontar para lixo.\=0
+LIS_Deturpar: Faz ponteiro proximo apontar para lixo.\=0
+LIS_Deturpar: Modifica o tipo cabeca.\=0
+LIS_Deturpar: Modifica tipo elemento corrente.\=0
+LIS_Deturpar: Parametro pListaParm eh nulo.\=0
+LIS_EsvaziarLista\=1
+LIS_EsvaziarLista:Retirar elemento não nulo da lista.\=0
+LIS_ExcluirElemento\=1
+LIS_ExcluirElemento: Excluir elemento em lista vazia.\=1
+LIS_ExcluirElemento: Excluir elemento que nao é fim lista.\=0
+LIS_ExcluirElemento: Excluir elemento que nao é origem lista.\=0
+LIS_ExcluirElemento: Excluir fim lista.\=0
+LIS_ExcluirElemento: Excluir origem lista.\=0
+LIS_InserirElementoAntes\=5
+LIS_InserirElementoAntes: Encadeamento de elemento em lista que contém elemento(s).\=2
+LIS_InserirElementoAntes: Encadeamento de elemento em lista vazia.\=2
+LIS_InserirElementoAntes: Encadeamento de elemento quando o elemento corrente não é o primeiro.\=1
+LIS_InserirElementoAntes: Encadeamento de elemento quando o elemento corrente é primeiro.\=1
+LIS_InserirElementoAntes: Falta de memória a criar elemento da lista.\=1
+LIS_InserirElementoApos\=3
+LIS_InserirElementoApos: Encadeamento de elemento em lista que contém elemento(s).\=2
+LIS_InserirElementoApos: Encadeamento de elemento em lista vazia.\=1
+LIS_InserirElementoApos: Encadeamento de elemento quando o elemento corrente não é o último.\=1
+LIS_InserirElementoApos: Encadeamento de elemento quando o elemento corrente é o último.\=1
+LIS_InserirElementoApos: Falta de memória a criar elemento da lista.\=0
+LIS_IrFinalLista\=0
+LIS_IrInicioLista\=1
+LIS_ObterValor\=0
+LIS_ObterValor: Obter valor de elemento corrente nao nulo.\=0
+LIS_ObterValor: Obter valor de elemento corrente nulo.\=0
+LIS_VerificarEstruturaLista\=9
+LIS_VerificarEstruturaLista: Encadeamento incorreto na lista.\=0
+LIS_VerificarEstruturaLista: Numero elementos lista != numero elementos encadeados.\=0
+
+//////////////////////////////////////////////////////////////////////
+// Fim arquivo de contadores acumulados
+//////////////////////////////////////////////////////////////////////

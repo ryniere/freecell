@@ -1,0 +1,6 @@
+/OUT:..\produto\TRAB2-2.exe
+/INCREMENTAL:NO
+/MACHINE:IX86
+testcarta.obj  carta.obj  
+ArcaboucoTeste.lib
+

@@ -1,0 +1,30 @@
+// Descritor:    	LinguagemTeste.txt
+// Autor:     		Carla Galdino, Eliana Goldner e Ryniere Silva
+// Data:      		05/jul/2009
+// Propósito: 		Arquivo descritor de comandos para o teste de verificador
+//
+
+Script Verificador:
+=verificarespaco
+É um comando que verifica o espaço alocado de acordo com seu tipo que pode ser tipo elemento ou tipo cabeça. Para estes tipos 
+de espaços, são chamadas as funções verificarElem e verificarCabeca respectivamente. O comando recebe como parâmetros o índice
+da lista e o identificador do tipo de espaço.
+
+=verificarmemoria
+É um comando que possibilita a exibição de todos os espaços alocados em memória. Por intermédio do módulo CESPDIN, mostra informações
+como: se o espaço está ativo ou inativo, id, conteúdo do valor e etc...
+Este comando não necessita de parâmetros.
+
+=verificarlista
+É um comando usada especificamente na verificação da estrutura lista genérica por inteiro. É composta por funções ainda mais específicas
+como verificarCabeca e verificarNumeroElementosLista.
+Os parâmetros deste comando são: o índice da lista a ser verificada e a condição de retorno esperada para sua execução.
+
+=verificarestrutura
+É um comando que verifica o encadeamento dos elementos de uma lista genérica duplamente encadeada e também dos número de elementos
+que esta lista possui, que deve ser consistente com o valor guardado em uma parte da estrutura cabeça.
+Os parâmetros deste comando são: o índice da lista a ser verificada e a condição de retorno esperada para sua execução.
+
+=controlarvaloresalocados
+É um comando usado em casos onde se deseja desalocar todos os espaços alocados para a execução dos casos de teste.
+O parâmetro requerido para este comando é o ValorEsperado que pode ser 0 ou 1, 1 utilizado para habilitar o controle de valores.

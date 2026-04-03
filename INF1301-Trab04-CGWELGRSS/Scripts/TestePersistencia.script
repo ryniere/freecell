@@ -1,0 +1,87 @@
+// Script:    TestePersistencia.script
+// Autor:     Autores: Carla Galdino Wanderley, Eliana Leite Goldner, Ryniere dos Santos Silva
+// Data:      20/abr/2008
+// Propósito: Testar superficialmente o módulo Persistencia
+//
+
+== Inicializar valores
+
+
+
+=declararparm   OK             int  0
+=declararparm   AtoProibido    int  1
+=declararparm   Erro           int  2
+=declararparm   FaltouMemoria  int  3
+
+=declararparm   TesteColBasesVazias             	int  0
+=declararparm   TesteColBasesPreenchidas        	int  1
+=declararparm   TesteColAleatoriasVazias        	int  2
+=declararparm   TesteColAleatoriasPreenchidas  	 	int  3
+=declararparm   TesteCelTemporariasVazias       	int  4
+=declararparm   TesteCelTemporariasPreenchidas  	int  5
+=declararparm   TesteTudoVazio       				int  6
+=declararparm   TesteTudoPreenchido  				int  7
+
+=declararparm   nomeJogo  string  "jogoSalvo1.txt"
+
+== Testar carregar Jogo Sem criar a estrutura
+=carregarjogo Erro
+
+== Testar salvar Jogo sem criar estrutura
+=salvarjogo TesteTudoPreenchido Erro
+
+== Testar salvar tudo vazio
+=salvarjogo TesteTudoVazio OK
+
+== Testar carregar tudo vazio
+=carregarjogo OK
+
+== Testar salvar Colunas Bases vazias
+=salvarjogo TesteColBasesVazias OK
+
+== Testar carregar Colunas Bases vazias
+=carregarjogo OK
+
+== Testar salvar Colunas Aleatorias Vazias
+=salvarjogo TesteColAleatoriasVazias OK
+
+== Testar carregar Colunas Aleatorias vazias
+=carregarjogo OK
+
+== Testar salvar Celulas Temporarias Vazias
+=salvarjogo TesteCelTemporariasVazias OK
+
+== Testar carregar Celulas Temporarias vazias
+=carregarjogo OK
+
+== Testar salvar tudo preenchido
+=salvarjogo TesteTudoPreenchido OK
+
+== Testar carregar tudo preenchido
+=carregarjogo OK
+
+== Testar salvar Colunas Bases preenchido
+=salvarjogo TesteColBasesPreenchidas OK
+
+== Testar carregar Colunas Bases preenchido
+=carregarjogo OK
+
+== Testar salvar Colunas Aleatorias preenchido
+=salvarjogo TesteColAleatoriasPreenchidas OK
+
+== Testar carregar Colunas Aleatorias preenchido
+=carregarjogo OK
+
+== Testar salvar Celulas Temporarias preenchido
+=salvarjogo TesteCelTemporariasPreenchidas OK
+
+== Testar carregar Celulas Temporarias preenchido
+=carregarjogo OK
+
+==Testar Alterar o nome do arquivo.
+=alterarnomearquivo nomeJogo OK
+
+
+
+
+// fim

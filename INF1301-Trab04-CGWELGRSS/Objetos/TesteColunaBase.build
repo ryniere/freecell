@@ -1,0 +1,6 @@
+/OUT:..\produto\TRAB2-5.exe
+/INCREMENTAL:NO
+/MACHINE:IX86
+test_coluna_base.obj  coluna_base.obj  lista.obj  tratamento_falha.obj  carta.obj  
+ArcaboucoTeste.lib
+

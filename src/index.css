@@ -1,0 +1,113 @@
+@import "tailwindcss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  min-height: 100vh;
+  font-family: 'Tahoma', 'Segoe UI', Geneva, Verdana, sans-serif;
+  user-select: none;
+  -webkit-user-select: none;
+  background: #008000;
+  color: #fff;
+}
+
+.dark body {
+  background: #006400;
+}
+
+/* ── Windows XP toolbar ── */
+.win-toolbar {
+  background: #ece9d8;
+  border-bottom: 1px solid #aca899;
+}
+
+.header-btn {
+  background: #ece9d8;
+  color: #000;
+  border: 1px solid transparent;
+  padding: 3px 10px;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 12px;
+  font-family: 'Tahoma', 'Segoe UI', sans-serif;
+  white-space: nowrap;
+  transition: background 0.1s, border-color 0.1s;
+}
+
+.header-btn:hover {
+  background: #c1d2ee;
+  border: 1px solid #316ac5;
+}
+
+.header-btn:active {
+  background: #98b5e2;
+  border: 1px solid #316ac5;
+}
+
+/* ── Recessed empty slot ── */
+.slot-empty {
+  background: #006800;
+  border: 2px solid;
+  border-color: #003800 #00a000 #00a000 #003800;
+  border-radius: 3px;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.dark .slot-empty {
+  background: #005000;
+  border-color: #002800 #008000 #008000 #002800;
+}
+
+.slot-highlight {
+  border-color: #ffcc00 !important;
+  background: #007800 !important;
+}
+
+/* ── Card base transitions ── */
+.game-card {
+  transition: transform 0.2s cubic-bezier(0.22, 0.61, 0.36, 1),
+              box-shadow 0.2s ease,
+              border-color 0.15s ease;
+}
+
+.game-card:hover {
+  transform: translateY(-2px);
+}
+
+/* ── Card selected ── */
+.card-selected {
+  transform: translateY(-5px) !important;
+}
+
+/* ── Deal animation — gentle fade-slide from above ── */
+@keyframes card-deal {
+  0% {
+    opacity: 0;
+    transform: translateY(-60px);
+  }
+  60% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.card-dealing {
+  animation: card-deal 0.35s cubic-bezier(0.22, 0.61, 0.36, 1) both;
+}
+
+/* ── Toast ── */
+.toast-enter {
+  animation: toast-in 0.35s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+@keyframes toast-in {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}

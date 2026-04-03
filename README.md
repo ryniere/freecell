@@ -1,20 +1,20 @@
 # FreeCell
 
-Reimaginacao moderna do jogo FreeCell, originalmente desenvolvido como trabalho final da disciplina **INF1301 — Programacao Modular** na **PUC-Rio**, em junho de 2009.
+A modern reimagining of the FreeCell card game, originally developed as the final project for **INF1301 — Modular Programming** at **PUC-Rio** in June 2009.
 
-## Origem
+## Origin
 
-O projeto original foi desenvolvido em C para Windows XP por:
+The original project was built in C for Windows XP by:
 
 - **Carla Galdino**
 - **Eliana Goldner**
 - **Ryniere Silva**
 
-A implementacao original seguia uma arquitetura modular com modulos separados para Carta, Baralho, Coluna Base, Coluna Aleatoria, Celula Temporaria, Lista Generica, Persistencia, Gerenciador, entre outros — todos com testes automatizados via scripts e um framework de testes proprio do curso. O codigo fonte em C, a documentacao e os scripts de teste originais estao preservados na pasta `INF1301-Trab04-CGWELGRSS/`.
+The original implementation followed a modular architecture with separate modules for Card, Deck, Foundation Column, Tableau Column, Free Cell, Generic List, Persistence, Game Manager, and others — all with automated tests via scripts and the course's own testing framework. The original C source code, documentation, and test scripts are preserved in the `INF1301-Trab04-CGWELGRSS/` folder.
 
-## Esta versao
+## This Version
 
-Em 2026, Ryniere decidiu recriar o jogo como uma aplicacao web moderna, mantendo o visual inspirado no FreeCell classico do Windows.
+In 2026, Ryniere decided to recreate the game as a modern web application, keeping the visual style inspired by the classic Windows FreeCell.
 
 ### Stack
 
@@ -22,28 +22,28 @@ Em 2026, Ryniere decidiu recriar o jogo como uma aplicacao web moderna, mantendo
 - **Vite** (bundler)
 - **Tailwind CSS v4**
 
-### Como rodar
+### Getting Started
 
 ```bash
 npm install
 npm run dev
 ```
 
-O jogo abre em `http://localhost:5173`.
+The game opens at `http://localhost:5173`.
 
-### Funcionalidades
+### Features
 
-- Jogo completo de FreeCell com regras classicas
-- Drag and drop para mover cartas
-- Duplo-clique para enviar cartas automaticamente para a base (com animacao)
-- Auto-supermove: move cartas bloqueadas automaticamente usando celulas livres
-- Desfazer (Ctrl+Z), Novo Jogo (Ctrl+N)
-- Salvar/Carregar jogo no localStorage
-- Estatisticas de partidas
-- Tema claro/escuro
-- Efeitos sonoros
-- Animacao de vitoria com confetti
+- Full FreeCell game with classic rules
+- Drag and drop to move cards
+- Double-click to automatically send cards to the foundation (with fly animation)
+- Auto-supermove: automatically moves blocking cards to free cells when needed
+- Undo (Ctrl+Z), New Game (Ctrl+N)
+- Save/Load game via localStorage
+- Game statistics tracking
+- Light/Dark theme
+- Sound effects
+- Win animation with confetti
 
-## Licenca
+## License
 
-Projeto academico / pessoal.
+Academic / personal project.
